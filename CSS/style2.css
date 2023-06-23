@@ -527,13 +527,13 @@ span {
 
 h2{
   font-family: 'Italiana', serif;
-  font-size: 48px;
+  font-size: 64px;
   color: #4D5139;
   font-weight: normal;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 10vh;
+  margin-top: 15vh;
   letter-spacing: 3px;
 line-height: 1.5;
 }
@@ -677,7 +677,7 @@ h2 span{
 
 
 .search {
-  padding: 50px 20px;
+  padding: 30px 20px;
   position: absolute;
   top: 0vh;
   left: -400px;
@@ -708,16 +708,15 @@ h2 span{
   border: 1px solid;
   border-radius: 10px;
 }
-
+.search_bar{
+  width: 250px;
+  margin-bottom: 20px;
+}
 
 /*客製區*/
 /* 說明步驟區 */
 
 
-#Custom h2{
-  margin:50px;
-  margin-top: 10vh;
-}
 
 .Custom_banner img{
 
@@ -1221,7 +1220,7 @@ color: #FFFCF5;
   width: 100%;
   margin: auto;
   margin-top: 10vh;
-  margin-bottom: 10vh;
+  /* margin-bottom: 10vh; */
 }
 
 .case_banner h2{
