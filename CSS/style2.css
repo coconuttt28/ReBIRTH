@@ -161,6 +161,7 @@ html,body{
   margin: 0 auto;
   width: 100%;
   justify-content: space-around;
+  margin-top: 10px;
 }
 
 .logo {
@@ -168,6 +169,11 @@ html,body{
   margin-top: 5px;
   min-width: 250px;
 
+}
+
+.logo img{
+  display: block;
+  width: 100%;
 }
 
 #topbar ul {
@@ -379,6 +385,7 @@ html,body{
         background-position: center;
         background-size: cover;
         margin-left: 15px;
+        margin-top: -10px;
     }
 
     @media screen and (max-height: 450px) {
