@@ -30,41 +30,53 @@
               <li><a href="faq.html">F&Q</a></li>
               <li><a href="contact.html">Contact</a></li>
           </ul>
-          <ul class="header_icon">
-              <li class="list_item">
-                  <a href="#" class="icon_search"></a>
-              </li>
-              <li class="list_item">
-                  <a class="icon_cart" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
-                      aria-controls="offcanvasExample">
-                  </a>
-              </li>
-              <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample"
-                  aria-labelledby="offcanvasExampleLabel">
-                  <div class="offcanvas-header" style="background-color: #FFFCF5;">
-                      <h5 class="offcanvas-title" id="offcanvasExampleLabel">購物車</h5>
-                      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                  </div>
-                  <div class="offcanvas-body" style="background-color: #FFFCF5;">
-                      <div>
-                          購物車內沒有商品
-                      </div>
-                      <div class="d-flex justify-content-center align-items-end mt-3" style="height: 82vh;">
-                          <button class="cartbtn btn-secondary" type="button" data-bs-toggle="dropdown">
-                              立即結帳
-                          </button>
-                      </div>
-                  </div>
-              </div>
-              <li class="list_item">
-                <a
-                href="#"
-                onclick="customizeWindowEvent()"
-                class="icon_sign_in"
-              ></a>
-              </li>
-          </ul>
-      </nav>
+          <div class="rwd_right">
+            <ul class="header_icon">
+                <li class="list_item">
+                    <a href="#" class="icon_search"></a>
+                </li>
+                <li class="list_item">
+                    <a class="icon_cart" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
+                        aria-controls="offcanvasExample">
+                    </a>
+                </li>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample"
+                    aria-labelledby="offcanvasExampleLabel">
+                    <div class="offcanvas-header" style="background-color: #FFFCF5;">
+                        <h5 class="offcanvas-title" id="offcanvasExampleLabel">購物車</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body" style="background-color: #FFFCF5;">
+                        <div>
+                            購物車內沒有商品
+                        </div>
+                        <div class="d-flex justify-content-center align-items-end mt-3" style="height: 82vh;">
+                            <button class="cartbtn btn-secondary" type="button" data-bs-toggle="dropdown">
+                                立即結帳
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <li class="list_item">
+                    <a href="#" onclick="customizeWindowEvent()" class="icon_sign_in"></a>
+                </li>
+            </ul>               
+             <!-- RWD列表 -->
+            <div id="myNav" class="overlay">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <div class="overlay-content">
+                    <a href="about.html">About</a>
+                    <a href="shop.html">Shop</a>
+                    <a href="custom.html">Custom</a>
+                    <a href="cases.html">Cases</a>
+                    <a href="faq.html">F&Q</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>
+            <span class="openbtn" onclick="openNav()"></span>
+        </div>
+        </nav>
     <!-- 登入 -->
     <div id="window-container" style="display: none;">
       <div class="window-content">
