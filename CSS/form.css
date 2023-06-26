@@ -58,7 +58,6 @@
   display: flex;
 }
 
-
 .purpose {
   /* border-right: 1px solid; */
   /* margin: 15px;
@@ -70,6 +69,8 @@
 .FL h4 {
   text-decoration-line: underline;
   text-align: center;
+  letter-spacing: 0.5px;
+line-height: 1.5;
 }
 
 
@@ -83,7 +84,6 @@
 #msform .action-button {
   width: 100px;
   background: #4d5139;
-  font-weight: bold;
   color: #fffcf5;
   border: 0 none;
   border-radius: 1px;
@@ -92,6 +92,7 @@
   margin: 10px 5px;
   text-decoration: none;
   font-size: 16px;
+  border-radius: 4px;
 }
 #msform .action-button:hover,
 #msform .action-button:focus {
