@@ -1476,6 +1476,7 @@ margin: auto;}
 
 /* footer */
 #footer {
+  font-family: 'Noto Serif TC', serif;
   display: flex;
   position: relative;
   width: 100%;
@@ -1540,7 +1541,8 @@ margin: auto;}
 
 .footer_list ul {
   flex-direction: column;
-  margin: 0 10px;
+  margin: 0px;
+  padding-left: 20px;
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
