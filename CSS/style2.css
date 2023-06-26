@@ -1328,10 +1328,11 @@ color: #FFFCF5;
       
     }
 
-    
+    .des{
+      font-family: 'Noto Serif TC', serif;
+    }
     
  .des p{
-      font-family: 'Noto Serif TC', serif;
       text-align: left;
       font-weight: normal;
       color: #000;
