@@ -98,6 +98,11 @@ menu,
 nav,
 section {
   display: block;
+  /* margin: 0;
+padding: 0;
+border: 0; */
+/* font: inherit; */
+box-sizing: border-box;
 }
 /* body {
   line-height: 1;
@@ -141,18 +146,13 @@ html,body{
 }
 #topbar {
   background-color: #445251;
-  background-size: contain;
-  min-height: 10%;
   position: fixed;
   top: 0;
   left: 0;
+  min-height: 10%;
   width: 100%;
-  display: flex;
-  padding: 10px 0;
-  align-items: center;
+  /* padding: 10px 210px 10px 100px; */
   z-index: 999;
-  justify-content: space-between;
-  /* height: 20vh !important; */
 }
 
 .header {
@@ -211,6 +211,17 @@ html,body{
 /* 側欄購物車叉叉形式 */
 .btn-close {
   --bs-btn-close-focus-shadow: none;
+}
+
+.offcanvas-title,
+.offcanvas-body{
+  font-family: 'Noto Serif TC', serif;
+}
+
+.offcanvas-title{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
 }
 
 .list-item {
@@ -417,118 +428,120 @@ html,body{
 
 /* 登入畫面 */
 #window-container {
-    position: fixed;
-    justify-content: center;
-    align-items: center;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 #window-pop {
-    background: white;
-    width: 30%;
-    z-index: 1;
-    margin: 12% auto;
-    overflow: auto;
-    border-radius: 20px;
+  background: white;
+  width: 30%;
+  z-index: 1;
+  margin: 12% auto;
+  overflow: auto;
+  border-radius: 20px;
 }
 
 .window-content {
-    width: auto;
-    overflow: auto;
-    text-align: center;
+  width: auto;
+  overflow: auto;
+  text-align: center;
 }
 
 span {
-    display: inline-block;
-    vertical-align: middle;
-    line-height: normal;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
 }
 
 .close-button {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    width: 20px;
-    height: 20px;
-    cursor: pointer;
-    font-size: 20px;
-    line-height: 1;
-    text-align: center;
-    color: #000;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  font-size: 20px;
+  line-height: 1;
+  text-align: center;
+  color: #000;
 }
 
 /* 登入表單 */
 .login-page {
-    margin: auto;
+  margin: auto;
 }
 
 .form {
-    position: relative;
-    z-index: 1;
-    background: #FFFCF5;
-    max-width: 360px;
-    padding: 45px;
-    text-align: center;
-    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  position: relative;
+  z-index: 1;
+  background: #FFFCF5;
+  max-width: 360px;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
 
 .form input {
-    outline: 0;
-    background: #FFFFFF;
-    width: 100%;
-    margin: 15px 0;
-    padding: 15px;
-    box-sizing: border-box;
-    font-size: 14px;
-    text-align: center;
-    border: 1px solid #4D5139;
-    border-radius: 4px;
+  outline: 0;
+  background: #FFFFFF;
+  width: 100%;
+  margin: 15px 0;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+  text-align: center;
+  border: 1px solid #4D5139;
+  border-radius: 4px;
 }
 
 .form button {
-    text-transform: uppercase;
-    outline: 0;
-    background: #445251;
-    width: 100%;
-    border: 0.3;
-    padding: 15px;
-    margin: 15px 0;
-    color: #FFFFFF;
-    font-size: 16px;
-    -webkit-transition: all 0.3 ease;
-    transition: all 0.3 ease;
-    cursor: pointer;
+  text-transform: uppercase;
+  outline: 0;
+  background: #445251;
+  width: 100%;
+  border: 0.3;
+  padding: 15px;
+  margin: 15px 0;
+  color: #FFFFFF;
+  font-size: 16px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
 }
 
 .form .message a {
-    color: #4D5139;
-    text-decoration: none;
-    font-size: 16px
+  color: #4D5139;
+  text-decoration: none;
+  font-size: 16px;
+  display: inline;
 }
 
 .form .register-form {
-    display: none;
+  display: none;
 }
 
 .register-form label,
 .login-form label {
-    font-size: 16px;
-    color: #4D5139;
-    font-weight: normal;
+  font-size: 16px;
+  color: #4D5139;
+  font-weight: normal;
 }
 
 .form h5 {
-    font-weight: normal;
-    color: #4D5139;
-    text-decoration: underline;
-    text-underline-offset: 10px;
-    border-bottom: #2f3837;
-    font-size: 20px;
-    padding-bottom: 35px;
+  font-weight: normal;
+  color: #4D5139;
+  text-decoration: underline;
+  text-underline-offset: 10px;
+  border-bottom: #2f3837;
+  font-size: 20px;
+  padding-bottom: 35px;
+
 }
 
 /*end登入*/
@@ -536,10 +549,10 @@ span {
 /*按鈕區*/
 
 
-h2{
+ h2{
   font-family: 'Italiana', serif;
   font-size: 64px;
-  color: #4D5139;
+  color: #445251;
   font-weight: normal;
   display: flex;
   justify-content: center;
@@ -555,7 +568,26 @@ line-height: 1.5;
   
 }
 
-h2 span{
+.ch_title{
+  font-family: 'Noto Serif TC', serif;
+  font-size: 20px;
+  position: relative;
+  color: #445251;
+}
+
+.ch_title::after{
+  content: "";
+  position: absolute;
+  width: 80px;
+  height: 20px;
+  background-color: #D6D8C9;
+  bottom: -4px;
+  left: 34px;
+  z-index: -1;
+
+}
+
+/* h2 span{
   background: -webkit-linear-gradient(transparent 60%, #D6D8C9 60%, #D6D8C9 100%,transparent 100%);
   font-family: 'Noto Serif TC', serif;
   font-size: 20px;
@@ -563,7 +595,7 @@ h2 span{
   justify-content: center;
   align-items: center;
   letter-spacing: 3px;
-  line-height: 1.5;}
+  line-height: 1.5;}  */
 
 
 .icon{
@@ -977,7 +1009,7 @@ h5{
    display: block;
   margin: auto;
   text-align: center;
-  padding: 30px;
+  /* padding: 30px; */
 
 
 }
@@ -997,6 +1029,7 @@ h5{
   font-family: 'Noto Serif TC', serif;
   font-size: 16px;
   color: #4D5139;
+  margin-top: 10px;
   
 }
 
@@ -1332,6 +1365,9 @@ color: #FFFCF5;
       font-family: 'Noto Serif TC', serif;
     }
     
+    .des h3{
+      font-size: 26px;
+    }
  .des p{
       text-align: left;
       font-weight: normal;
