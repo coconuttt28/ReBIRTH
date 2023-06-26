@@ -234,6 +234,10 @@ body {
   margin-right: 8px;
 }
 
+.offcanvas-body {
+  text-align: left;
+}
+
 /* 設定SVG */
 .list_item a {
   display: block;
@@ -743,7 +747,7 @@ h2 {
 .search {
   padding: 30px 20px;
   position: absolute;
-  top: 0vh;
+  top: 10vh;
   left: -400px;
   background-color: #d6d8c9;
   border: 2px solid #4d5139;
@@ -755,13 +759,21 @@ h2 {
   .search {
     display: none;
   }
+}
 
+.search_item_btn {
+  padding-top: 15px;
+  text-align: center;
 }
 
 
 .search ul {
   text-align: left;
   padding: 0;
+}
+
+.search ul li{
+  padding: 8px 0;
 }
 
 .search a {
