@@ -1098,7 +1098,7 @@ h5 {
   margin-top: 30px;
   margin-bottom: 50px;
   position: relative;
-  background-color: rgb(68, 82, 81, 0.8);
+  background-color: rgb(68, 82, 81,0.8);
   overflow: hidden;
 }
 
@@ -1247,6 +1247,10 @@ h5 {
   }
 
 }
+input[type='radio'],input[type='checkbox']{
+  accent-color: #445251;
+}
+
 
 /*加入購物車*/
 
