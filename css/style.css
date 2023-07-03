@@ -1903,10 +1903,12 @@ input[type="submit"]:hover {
     color: #FFFCF5;
     white-space: nowrap;
     text-align: center;
-    bottom: 15px;
+    bottom: 5px;
     left: 50%;
     transform: translateX(-50%);
     font-size: 14px;
+    line-height: 20px;
+
 }
 
 /* 右側 */

@@ -642,6 +642,7 @@ h2 {
   height: 400px;
   object-fit: cover;
   margin-top: 30px;
+  margin-bottom: 25px;
 }
 
 @media (max-width:768px) {
@@ -740,6 +741,7 @@ h2 {
 #products img:hover {
   transform: translate3d(0px, 0px, 0px) scale3d(1.1, 1.1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
   transform-style: preserve-3d;
+  transition: 0.3s;
 }
 
 /*search*/
@@ -756,9 +758,11 @@ h2 {
   font-family: 'Noto Serif TC', serif;
 }
 
-@media (max-width:1440px) {
+@media (max-width:1512px) {
   .search {
-    display: none;
+    top: 10vh;
+  left: -220px;
+  width: 200px;
   }
 }
 
@@ -792,6 +796,17 @@ h2 {
 .search_bar {
   width: 250px;
   margin-bottom: 20px;
+}
+
+@media (max-width:1512px) {
+  .search_bar {
+    width: 150px;
+    }
+
+    .search_button {
+      width: 150px;
+      padding: 10px 30px
+    }
 }
 
 /*客製區*/
@@ -943,7 +958,7 @@ h2 {
 }
 
 
-@media (max-width: 1440px) {
+@media (max-width: 1512px) {
   .custom_Img_right img {
     width: 250px;
     left: 75%;
@@ -969,7 +984,7 @@ h2 {
 
 
 
-@media (max-width: 1440px) {
+@media (max-width: 1512px) {
   .custom_Img_left img {
     width: 250px;
     left: 15%;
@@ -1087,7 +1102,7 @@ h5 {
   overflow: hidden;
 }
 
-@media (max-width: 1440px) {
+@media (max-width: 1512px) {
   .custom_selector {
     height: 1000px;
   }
@@ -1623,10 +1638,11 @@ h5 {
   color: #FFFCF5;
   white-space: nowrap;
   text-align: center;
-  bottom: 15px;
+  bottom: 5px;
   left: 50%;
   transform: translateX(-50%);
   font-size: 14px;
+  line-height: 20px;
 }
 
 /* 右側 */
