@@ -122,13 +122,15 @@
 
     <main>
         <section id="getInTouch">
-            <div class="both">
-                <div class="tab-content">
-                    <!-- 聯絡我們 -->
-                    <div id="content_info" class="getInTouch_form">
-                        <div class="title_getInTouch">
-                            <H2 class="getInTouch_h2">　Get In Touch　</H2>
-                            <p class="getInTouch_p">有任何問題，請聯繫我們</p>
+            <div class="getInTouch_item">
+                <div class="both">
+                    <div class="tab-content">
+                        <!-- 聯絡我們 -->
+                        <div id="content_info" class="getInTouch_form" style="display: none">
+                            <div class="title_getInTouch">
+                                <H2 class="getInTouch_h2">　Get In Touch　</H2>
+                                <p class="getInTouch_p">有任何問題，請聯繫我們</p>
+                            </div>
                             <div class="getInTouch_form_list">
                                 <form name="member_mod_form" id="member_mod_form" action="" method="post">
                                     <label class="label_name" for="username">姓名</label>
@@ -144,73 +146,78 @@
                                     <label class="label_msg" for="message">問題及建議</label>
                                     <textarea class="textarea_msg" name="message" id="message" cols="30" rows="10"
                                         title="請輸入內容"></textarea>
-                                    <p>
-                                        <input class="input_send" type="submit" value="送出">
-                                    <div class="tab">
-                                        <a href=".details">
-                                            <p>Contact Details</p>
-                                        </a>
-                                        <img src="./contact/image/tab_arrow.svg" alt="arrow">
+                                    <div class="contact_tab">
+                                        <p>
+                                            <input class="input_send" type="submit" value="送出">
+                                        </p>
+                                        <div class="tab">
+                                            <a href=".details">
+                                                <p>Contact Details</p>
+                                            </a>
+                                            <img src="./contact/image/tab_arrow.svg" alt="arrow">
+                                        </div>
                                     </div>
                                 </form>
                             </div>
+
                         </div>
-                    </div>
 
-                    <!-- 店鋪資訊 -->
-                    <div id="traffic_info" class="details">
-                        <div class="title_details">
-                            <H2 class="details_h2">Contact Details</H2>
-                            <p class="details_p">店鋪資訊</p>
-                        </div>
-                        <div class="contact_info">
-                            <div class="contact-block">
-                                <div class="icon-container">
-                                    <img src="./contact/image/call.svg" alt="call icon">
-                                </div>
-                                <p class="info">02-000-0000</p>
+                        <!-- 店鋪資訊 -->
+                        <div id="traffic_info" class="details">
+                            <div class="title_details">
+                                <H2 class="details_h2">Contact Details</H2>
+                                <p class="details_p">店鋪資訊</p>
                             </div>
+                            <div class="contact_item">
+                                <div class="contact_info">
+                                    <div class="contact-block">
+                                        <div class="icon-container">
+                                            <img src="./contact/image/call.svg" alt="call icon">
+                                        </div>
+                                        <p class="info">02-000-0000</p>
+                                    </div>
 
-                            <div class="contact-block">
-                                <div class="icon-container">
-                                    <img src="./contact/image/location.svg" alt="location icon">
-                                </div>
-                                <p class="info">台北市花花區玫瑰路一段321號</p>
-                            </div>
+                                    <div class="contact-block">
+                                        <div class="icon-container">
+                                            <img src="./contact/image/location.svg" alt="location icon">
+                                        </div>
+                                        <p class="info">台北市花花區玫瑰路一段321號</p>
+                                    </div>
 
-                            <div class="contact-block">
-                                <div class="icon-container">
-                                    <img src="./contact/image/car.svg" alt="car icon">
-                                </div>
-                                <p class="info">至花現幸福站，４號出口，直行玫瑰路一段3分鐘即可抵達 </p>
-                            </div>
+                                    <div class="contact-block">
+                                        <div class="icon-container">
+                                            <img src="./contact/image/car.svg" alt="car icon">
+                                        </div>
+                                        <p class="info">至花現幸福站，４號出口，直行玫瑰路一段3分鐘即可抵達 </p>
+                                    </div>
 
-                            <div class="contact-block clock">
-                                <div class="icon-container">
-                                    <img src="./contact/image/clock.svg" alt="clock icon">
+                                    <div class="contact-block clock">
+                                        <div class="icon-container">
+                                            <img src="./contact/image/clock.svg" alt="clock icon">
+                                        </div>
+                                        <p class="info">營業時間：<br>
+                                            周一至周六 ：9:00 am 至 18:00 pm<br>
+                                            周日公休，詳情見官方粉絲團</p>
+                                    </div>
                                 </div>
-                                <p class="info">營業時間：<br>
-                                    周一至周六 ：9:00 am 至 18:00 pm<br>
-                                    周日公休，詳情見官方粉絲團</p>
-                            </div>
-                            <div class="tab active">
-                                <a href=".getInTouch_form">
-                                    <p>Get In Touch</p>
-                                </a>
-                                <img src="./contact/image/tab_arrow.svg" alt="arrow">
+                                <div class="tab active">
+                                    <a href=".getInTouch_form">
+                                        <p>Get In Touch</p>
+                                    </a>
+                                    <img src="./contact/image/tab_arrow.svg" alt="arrow">
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-
-            <!-- map -->
-            <div class="container_map">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2149.3457890568952!2d121.55920465282975!3d25.04240968097686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abbf23ce4b3b%3A0xc82b0f87ff7df9dc!2z5p2-5bGx5paH5Ym15ZyS5Y2A!5e0!3m2!1szh-TW!2stw!4v1686292783348!5m2!1szh-TW!2stw"
-                    width="600" height="827" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade" class="map"></iframe>
+                <!-- map -->
+                <div class="container_map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2149.3457890568952!2d121.55920465282975!3d25.04240968097686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abbf23ce4b3b%3A0xc82b0f87ff7df9dc!2z5p2-5bGx5paH5Ym15ZyS5Y2A!5e0!3m2!1szh-TW!2stw!4v1686292783348!5m2!1szh-TW!2stw"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade" class="map"></iframe>
+                </div>
             </div>
         </section>
 

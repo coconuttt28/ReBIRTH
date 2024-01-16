@@ -128,8 +128,9 @@ $('.both').find('input, textarea').on('keyup blur focus', function (e) {
     }
 });
 
+// 切換表單
 $('.tab a').on('click', function (e) {
-    $('.getInTouch_form').hide();
+    $('.getInTouch_form, .details').hide(); // 隐藏所有部分
     e.preventDefault();
 
     $(this).parent().addClass('active');
@@ -140,20 +141,23 @@ $('.tab a').on('click', function (e) {
     $('.tab-content > div').not(target).hide();
 
     $(target).fadeIn(600);
-
 });
 
 
 function toggleSection(sectionId) {
     var section = document.getElementById(sectionId);
     if (section.style.display === 'none') {
-        section.style.display = 'block';
+        section.style.display = 'flex';
     } else {
         section.style.display = 'none';
     }
 }
+document.addEventListener('DOMContentLoaded', function() {
+    toggleSection('content_info'); // 先隱藏 content_info
+    toggleSection('traffic_info'); // 顯示 traffic_info
+});
 
-function adjustSectionDisplay(sectionId, displayValue) {
-    var section = document.getElementById(sectionId);
-    section.style.display = displayValue;
-}
+// function adjustSectionDisplay(sectionId, displayValue) {
+//     var section = document.getElementById(sectionId);
+//     section.style.display = displayValue;
+// }

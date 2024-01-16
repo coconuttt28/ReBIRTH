@@ -169,26 +169,34 @@ html {
 #topbar {
     background-color: #445251;
     position: fixed;
-    
     top: 0;
     left: 0;
     min-height: 10%;
     width: 100%;
-    padding: 10px 210px 10px 100px;
+    padding: 10px 2vw;
     z-index: 999;
+    display: flex;
+    align-items: center;
 }
 
 .header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 0 auto;
+    width: 100%;
+}
+
+.header li {
+    display: flex;
 }
 
 .logo {
     margin-top: 5px;
-    min-width: 300px;
-    text-align: left;
+}
+
+.logo img {
+    width: 270px;
+    min-width: 200px;
 }
 
 .checkbox_input {
@@ -200,13 +208,10 @@ html {
 }
 
 .header_menu {
-    display: flex;
+    flex: 1;
     justify-content: center;
-    align-items: center;
     letter-spacing: 5px;
     font-family: 'Italiana';
-    position: sticky;
-    text-align: center;
 }
 
 .header_menu li {
@@ -220,9 +225,26 @@ html {
     font-size: 18px;
 }
 
+
+.header_menu a::after {
+    content: "";
+    display: block;
+    position: relative;
+    margin: auto;
+    top: 10px;
+    width: 0;
+    height: 1.5px;
+    background-color: #FFFCF5;
+    transform-origin: center center;
+    transition: all .3s;
+}
+
+.header_menu a:hover::after {
+    width: 2rem;
+}
+
 .header_icon {
     list-style-type: none;
-    text-align: right;
 }
 
 /* 側欄購物車叉叉形式 */
@@ -402,17 +424,21 @@ span {
     padding-bottom: 35px;
 }
 
+
 @media (max-width: 1253px) {
-    #topbar {
-        padding: 10px 50px;
+
+    .logo {
+        min-width: 200px;
+        height: 100%;
     }
 
-    .header {
-        justify-content: center;
+    .logo img {
+        max-width: 200px;
+        min-width: 200px;
     }
 }
 
-@media (max-width: 1110px) {
+@media (max-width: 992px) {
     #topbar {
         padding: 10px 20px;
     }
@@ -441,23 +467,12 @@ span {
         background-size: cover;
     }
 
-    .logo {
-        min-width: 200px;
-        height: 100%;
-    }
-
-    .logo img{
-        max-width: 200px;
-        min-width: 200px;
-    }
-
     /* 右側設置 */
 
     .rwd_right {
         display: flex;
         justify-content: flex-end;
         align-items: center;
-        height: 8vh;
     }
 
     /* 漢堡列表 */
@@ -512,28 +527,34 @@ span {
         cursor: pointer;
         text-align: right;
         height: 28px;
-        width: 44px;
+        width: 30px;
         background-image: url(../image/hambergermenu.svg);
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
-        margin-left: 15px;
+    }
+}
+
+@media (max-width:768px) {
+    #topbar {
+        padding: 10px 15px;
+        min-height: 72.06px;
+    }
+}
+
+@media (max-width:576px) {
+    .overlay {
+        overflow-y: auto;
     }
 
-    @media screen and (max-height: 450px) {
-        .overlay {
-            overflow-y: auto;
-        }
+    .overlay a {
+        font-size: 20px
+    }
 
-        .overlay a {
-            font-size: 20px
-        }
-
-        .overlay .closebtn {
-            font-size: 40px;
-            top: 15px;
-            right: 35px;
-        }
+    .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
     }
 }
 
@@ -589,13 +610,12 @@ section {
     min-height: 350px;
     width: 100vw;
     z-index: 2;
-    /* transform: translate3d(0px, 21px, 0px) scale(1.4); */
 }
 
 .bg_faq {
     background-image: url(../image/P1_bg.svg);
     background-repeat: no-repeat;
-    background-position:center 47%;
+    background-position: center 47%;
     background-size: 100% 95%;
     position: absolute;
     left: center;
@@ -616,13 +636,13 @@ section {
 
 .title_faq h2 {
     color: #4D5139;
-    font-size: 64px;
+    font-size: 44px;
     letter-spacing: 3px;
     white-space: nowrap;
 }
 
 .title_faq .ch_title {
-    font-size: 20px;
+    font-size: 16px;
     position: relative;
     display: inline-flex;
     z-index: 2;
@@ -632,9 +652,9 @@ section {
     content: '';
     background-color: #D6D8C9;
     position: absolute;
-    width: 80px;
-    height: 20px;
-    top: 12px;
+    width: 65px;
+    height: 15px;
+    top: 8px;
     right: 0px;
     z-index: -1;
 }
@@ -648,7 +668,7 @@ section {
 }
 
 .faq_list_item {
-    font-size: 16px;
+    font-size: 14px;
     color: #445251;
     letter-spacing: 0.5px;
     line-height: 1.5;
@@ -676,11 +696,9 @@ section {
     margin-top: -15px;
     backdrop-filter: blur(1.2px);
     background-color: #fffcf5c4;
-    background: linear-gradient(
-    to top bottom,
-    rgba(255, 255, 255, 0.5),
-    rgba(255, 255, 255, 0.5)
-    );
+    background: linear-gradient(to top bottom,
+            rgba(255, 255, 255, 0.5),
+            rgba(255, 255, 255, 0.5));
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     width: 896px;
 
@@ -702,24 +720,21 @@ section {
     .faq_list_item_text {
         width: 456px;
     }
+
+    .title_faq h2 {
+        font-size: 36px;
+    }
+    
+    .title_faq .ch_title {
+        font-size: 14px;
+    }
+
+    .faq_list {
+        padding-top: 0;
+        padding-bottom: 50px;
+        padding: 0 20px 50px 20px;
+    }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* footer */
 #footer {
@@ -881,8 +896,6 @@ section {
     height: 50px;
     bottom: 30px;
     right: 30px;
-    /* color: #dddddd; */
-    /* background-color: transparent; */
     background-image: url(../image/gotop.svg);
     background-size: cover;
     opacity: 0;
@@ -914,7 +927,7 @@ section {
     #footer {
         display: flex;
         width: 100%;
-        padding: 50px 20px;
+        padding: 50px 100px;
         margin: 0 auto;
         background-color: #445251;
         right: 0;
@@ -930,6 +943,7 @@ section {
         text-align: center;
         letter-spacing: 3px;
         line-height: 1.5;
+        font-size: 14px;
     }
 
     .footer_left {
@@ -979,6 +993,11 @@ section {
         transition: 0.4s;
     }
 
+    .rwd_footer_list .active {
+        display: flex;
+        justify-content: space-between;
+    }
+
     .accordion:hover {
         background-color: #d6d8c966;
     }
@@ -997,14 +1016,8 @@ section {
     }
 
     /* 列表減號 */
-    .active:after {
-        content: "";
-        height: 18px;
-        width: 18px;
+    .accordion.active:after {
         background-image: url(../image/footer_minus.svg);
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
     }
 
     .footer_panel {
@@ -1035,5 +1048,43 @@ section {
         content: "";
         background-color: #d6d8c966;
         color: #FFFCF5;
+    }
+}
+
+@media (max-width: 576px) {
+    #footer {
+        padding: 50px 20px;
+    }
+
+    .accordion {
+        font-size: 12px;
+    }
+
+    .accordion:after,
+    .accordion.active:after {
+        height: 14px;
+        width: 14px;
+    }
+
+    .footer_icon_list a {
+        width: 38px;
+        height: 38px;
+    }
+
+    .footer_logo {
+        min-width: 200px;
+    }
+
+    .footer_address,
+    .footer_panel a {
+        font-size: 12px;
+    }
+
+    .footer_address p {
+        line-height: 2.0;
+    }
+
+    .footer_copyright {
+        font-size: 12px;
     }
 }

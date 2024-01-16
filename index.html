@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex,nofollow" />
     <title>《Re:BIRTH》永生花藝</title>
+    <!-- banner -->
+    <!-- <link rel='stylesheet' href='https://cdn.rawgit.com/filipelinhares/ress/master/dist/ress.min.css'> -->
     <!-- 熱門商品左右切換 -->
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.css'>
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css'>
@@ -125,45 +127,55 @@
     <main>
         <!-- Banner -->
         <section id="banner">
-            <div class="content-slider">
-                <input type="radio" id="banner1" class="sec-1-input" name="banner" checked>
-                <input type="radio" id="banner2" class="sec-1-input" name="banner">
-                <input type="radio" id="banner3" class="sec-1-input" name="banner">
-                <div class="slider">
-                    <div id="top-banner-1" class="banner">
-                        <div class="banner-inner-wrapper">
-                        </div>
-                        <div class="banner-inner-wrapper-overlay">
-                            <div class="learn-more-button"><a href="shop.html">SHOP NOW > </a></div>
-                        </div>
-                    </div>
-                    <div id="top-banner-2" class="banner">
-                        <div class="banner-inner-wrapper">
-                        </div>
-                        <div class="banner-inner-wrapper-overlay">
-                            <div class="learn-more-button"><a href="shop.html">SHOP NOW > </a></div>
-                        </div>
-                    </div>
-                    <div id="top-banner-3" class="banner">
-                        <div class="banner-inner-wrapper">
-                        </div>
-                        <div class="banner-inner-wrapper-overlay">
-                            <div class="learn-more-button"><a href="shop.html">SHOP NOW > </a></div>
+            <div class="carousel">
+                <div class="carousel__nav">
+                    <span id="moveLeft" class="carousel__arrow">
+                        <svg class="carousel__icon" width="24" height="24" viewBox="0 0 24 24">
+                            <path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z"></path>
+                        </svg>
+                    </span>
+                    <span id="moveRight" class="carousel__arrow">
+                        <svg class="carousel__icon" width="24" height="24" viewBox="0 0 24 24">
+                            <path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"></path>
+                        </svg>
+                    </span>
+                </div>
+                <div class="carousel-item-banner carousel-item--1">
+                    <div class="carousel-item__image"></div>
+                    <div class="carousel-item__info">
+                        <div class="carousel-item__container">
+                            <h2 class="carousel-item__subtitle">Gift</h2>
+                            <h1 class="carousel-item__title">贈禮花束</h1>
+                            <p class="carousel-item__description">花香四溢，情意滿溢。精心打造每一束花束，傳遞您的心意。</p>
+                            <a href="shop.html" class="carousel-item__btn">SHOP NOW > </a>
                         </div>
                     </div>
                 </div>
-                <nav>
-                    <div class="controls">
-                        <label for="banner1"><span class="progressbar"><span class="progressbar-fill"></span></span>●
-                            Wedding</label>
-                        <label for="banner2"><span class="progressbar"><span class="progressbar-fill"></span></span>●
-                            Gift</label>
-                        <label for="banner3"><span class="progressbar"><span class="progressbar-fill"></span></span>●
-                            Indoor Flower</label>
-
+                <div class="carousel-item-banner carousel-item--2">
+                    <div class="carousel-item__image"></div>
+                    <div class="carousel-item__info">
+                        <div class="carousel-item__container">
+                            <h2 class="carousel-item__subtitle">Wedding</h2>
+                            <h1 class="carousel-item__title">婚禮花束</h1>
+                            <p class="carousel-item__description">每一片花瓣，都是對幸福的祝福。讓我們一同見證您人生的重要時刻。</p>
+                            <a href="shop.html" class="carousel-item__btn">SHOP NOW > </a>
+                        </div>
                     </div>
-                </nav>
+                </div>
+                <div class="carousel-item-banner carousel-item--3">
+                    <div class="carousel-item__image"></div>
+                    <div class="carousel-item__info">
+                        <div class="carousel-item__container">
+                            <h2 class="carousel-item__subtitle">Indoor Flower</h2>
+                            <h1 class="carousel-item__title">居家裝飾</h1>
+                            <p class="carousel-item__description">生活因花而美，家居因綠盎然。選擇居家植栽，為家添上自然的一筆。</p>
+                            <a href="shop.html" class="carousel-item__btn">SHOP NOW > </a>
+                        </div>
+                    </div>
+                </div>
+
             </div>
+
         </section>
         <!-- 本店特色 -->
         <div id="feature">
@@ -208,6 +220,53 @@
                     </div>
                 </div>
             </div>
+            <div class="rwd_feature">
+                <div class="rwd_title_feature">
+                    <h2>
+                        <span class="en_title">Our Feature<span class="ch_title"> / 本店特色</span>
+                    </h2>
+                </div>
+                <div class="rwd_content">
+                    <div class="content_1">
+                        <img src="./image/P2-picture-left.jpg" alt="代客送花">
+                        <div class="content_text">
+                            <h3 class="en_content">Flower<br>
+                                Delivery</h3>
+                            <h4 class="ch_content_title">代客送花</h4>
+                            <p class="ch_content_description">免代送費用</p>
+                        </div>
+                    </div>
+                    <div class="content_2">
+                        <img src="./image/P2-picture-right.jpg" alt="客製服務">
+                        <div class="content_text">
+                            <h3 class="en_content">Flower<br>
+                                Customize</h3>
+                            <h4 class="ch_content_title">客製服務</h4>
+                            <p class="ch_content_description">線上即時預覽成品</p>
+                        </div>
+
+                    </div>
+                    <div class="content_3">
+                        <img src="./image/P3-picture-left.jpg" alt="貼心通知">
+                        <div class="content_text">
+                            <h3 class="en_content">Order<br>
+                                Summary</h3>
+                            <h4 class="ch_content_title">貼心通知</h4>
+                            <p class="ch_content_description">貨物進度透明<br>到貨拍照通知</p>
+                        </div>
+                    </div>
+                    <div class="content_4">
+                        <img src="./image/P3-picture-right.jpg" alt="售後服務">
+                        <div class="content_text">
+                            <h3 class="en_content">After-Sales<br>
+                                Service</h3>
+                            <h4 class="ch_content_title">售後服務</h4>
+                            <p class="ch_content_description">免費修剪、加價換花</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
         </div>
         <!-- 熱門商品 -->
         <section id="bestSeller">
@@ -217,9 +276,10 @@
                 </h2>
             </div>
             <div class="bestSeller_tab">
-                    <button class="bestSeller_tablinks" onclick="openCity(event, 'wedding')">婚禮花束</button>
-                    <button id="defaultOpen" class="bestSeller_tablinks gift" onclick="openCity(event, 'gift')">贈禮花束</button>
-                    <button class="bestSeller_tablinks" onclick="openCity(event, 'indoorFlower')">居家裝飾</button>
+                <button class="bestSeller_tablinks" onclick="openCity(event, 'wedding')">婚禮花束</button>
+                <button id="defaultOpen" class="bestSeller_tablinks gift"
+                    onclick="openCity(event, 'gift')">贈禮花束</button>
+                <button class="bestSeller_tablinks" onclick="openCity(event, 'indoorFlower')">居家裝飾</button>
             </div>
             <!-- 商品 -->
             <div class="list_box_bestseller">
@@ -228,58 +288,65 @@
                     <ul>
                         <li>
                             <a href="products.html">
-                                <figure>
-                                    <img src="./image/P3-Img-wedding-1.jpg" alt="Morning Dew 晨露">
-                                    <figcaption>
+                                <div class="bestseller_product">
+                                    <div class="bestseller_img">
+                                        <img src="./image/P3-Img-wedding-1.jpg" alt="Morning Dew 晨露">
+                                    </div>
+                                    <div class="bestseller_content">
                                         <span class="en_prod_name">Morning Dew</span><br>
                                         <span class="ch_prod_name">-晨露-</span><br>
                                         <span class="ch_prod_name2">NT$</span>
                                         <span class="en_prod_money">1,199</span>
-                                    </figcaption>
-                                </figure>
+                                    </div>
+                                </div>
                             </a>
                         </li>
                         <li class="slider responsive">
                             <a href="products.html">
-                                <figure>
-                                    <img src="./image/P3-Img-wedding-2.jpg" alt="Winter Wonderland 冬日仙境">
-                                    <figcaption>
+                                <div class="bestseller_product">
+                                    <div class="bestseller_img">
+                                        <img src="./image/P3-Img-wedding-2.jpg" alt="Winter Wonderland 冬日仙境">
+                                    </div>
+                                    <div class="bestseller_content">
                                         <span class="en_prod_name">Winter Wonderland</span><br>
                                         <span class="ch_prod_name">-冬日仙境-</span><br>
                                         <span class="ch_prod_name2">NT$</span>
                                         <span class="en_prod_money">2,499</span>
-                                    </figcaption>
-                                </figure>
+                                    </div>
+                                </div>
                             </a>
                         </li>
                         <li class="slider responsive">
                             <a href="products.html">
-                                <figure>
-                                    <img src="./image/P3-Img-wedding-3.jpg" alt="Sunny Skies 晴空萬里">
-                                    <figcaption>
+                                <div class="bestseller_product">
+                                    <div class="bestseller_img">
+                                        <img src="./image/P3-Img-wedding-3.jpg" alt="Sunny Skies 晴空萬里">
+                                    </div>
+                                    <div class="bestseller_content">
                                         <span class="en_prod_name">Sunny Skies</span><br>
                                         <span class="ch_prod_name">-晴空萬里-</span><br>
                                         <span class="ch_prod_name2">NT$</span>
                                         <span class="en_prod_money">2,399</span>
-                                    </figcaption>
-                                </figure>
+                                    </div>
+                                </div>
                             </a>
                         </li>
                         <li class="slider responsive">
                             <a href="products.html">
-                                <figure>
-                                    <img src="./image/P3-Img-wedding-4.jpg" alt="Love of Bluebird 青鳥之戀">
-                                    <figcaption>
+                                <div class="bestseller_product">
+                                    <div class="bestseller_img">
+                                        <img src="./image/P3-Img-wedding-4.jpg" alt="Love of Bluebird 青鳥之戀">
+                                    </div>
+                                    <div class="bestseller_content">
                                         <span class="en_prod_name">Love of Bluebird</span><br>
                                         <span class="ch_prod_name">-青鳥之戀-</span><br>
                                         <span class="ch_prod_name2">NT$</span>
                                         <span class="en_prod_money">3,299</span>
-                                    </figcaption>
-                                </figure>
+                                    </div>
+                                </div>
                             </a>
                         </li>
                     </ul>
-                    
                     <div class="side_title_wedding">
                         <img src="./image/P3-font-Wedding.png" alt="熱門商品：婚禮花束">
                     </div>
@@ -289,59 +356,67 @@
                     <ul>
                         <li>
                             <a href="products.html">
-                                <figure>
-                                    <img src="./image/P3-Img-gift-1.jpg" alt="Morning Dew 晨露">
-                                    <figcaption>
+                                <div class="bestseller_product">
+                                    <div class="bestseller_img">
+                                        <img src="./image/P3-Img-gift-1.jpg" alt="Morning Dew 晨露">
+                                    </div>
+                                    <div class="bestseller_content">
                                         <span class="en_prod_name">Angelic Wings</span><br>
                                         <span class="ch_prod_name">-天使之翼-</span><br>
                                         <span class="ch_prod_name2">NT$</span>
                                         <span class="en_prod_money">3,699</span>
-                                    </figcaption>
-                                </figure>
+                                    </div>
+                                </div>
                             </a>
                         </li>
                         <li class="slider responsive">
                             <a href="products.html">
-                                <figure>
-                                    <img src="./image/P3-Img-gift-2.jpg" alt="Winter Wonderland 冬日仙境">
-                                    <figcaption>
+                                <div class="bestseller_product">
+                                    <div class="bestseller_img">
+                                        <img src="./image/P3-Img-gift-2.jpg" alt="Winter Wonderland 冬日仙境">
+                                    </div>
+                                    <div class="bestseller_content">
                                         <span class="en_prod_name">Blue Lagoon</span><br>
                                         <span class="ch_prod_name">-藍色礁湖-</span><br>
                                         <span class="ch_prod_name2">NT$</span>
                                         <span class="en_prod_money">2,599</span>
-                                    </figcaption>
-                                </figure>
+                                    </div>
+                                </div>
                             </a>
                         </li>
                         <li class="slider responsive">
                             <a href="products.html">
-                                <figure>
-                                    <img src="./image/P3-Img-gift-3.jpg" alt="Sunny Skies 晴空萬里">
-                                    <figcaption>
+                                <div class="bestseller_product">
+                                    <div class="bestseller_img">
+                                        <img src="./image/P3-Img-gift-3.jpg" alt="Sunny Skies 晴空萬里">
+                                    </div>
+                                    <div class="bestseller_content">
                                         <span class="en_prod_name">Blooming Roses</span><br>
                                         <span class="ch_prod_name">-玫瑰綻放-</span><br>
                                         <span class="ch_prod_name2">NT$</span>
                                         <span class="en_prod_money">2,899</span>
-                                    </figcaption>
-                                </figure>
+                                    </div>
+                                </div>
                             </a>
                         </li>
                         <li class="slider responsive">
                             <a href="products.html">
-                                <figure>
-                                    <img src="./image/P3-Img-gift-4.jpg" alt="Love of Bluebird 青鳥之戀">
-                                    <figcaption>
+                                <div class="bestseller_product">
+                                    <div class="bestseller_img">
+                                        <img src="./image/P3-Img-gift-4.jpg" alt="Love of Bluebird 青鳥之戀">
+                                    </div>
+                                    <div class="bestseller_content">
                                         <span class="en_prod_name">Autumn Harvest</span><br>
                                         <span class="ch_prod_name">-秋日豐收-</span><br>
                                         <span class="ch_prod_name2">NT$</span>
                                         <span class="en_prod_money">1,399</span>
-                                    </figcaption>
-                                </figure>
+                                    </div>
+                                </div>
                             </a>
                         </li>
                     </ul>
                     <div class="side_title_gift">
-                        <img src="./image/P3-font-Gift.png" alt="熱門商品：婚禮花束">
+                        <img src="./image/P3-font-Gift.png" alt="熱門商品：贈禮花束">
                     </div>
                 </div>
                 <!-- 居家 -->
@@ -349,54 +424,62 @@
                     <ul>
                         <li>
                             <a href="products.html">
-                                <figure>
-                                    <img src="./image/P3-Img-indoor-1.jpg" alt="Morning Dew 晨露">
-                                    <figcaption>
+                                <div class="bestseller_product">
+                                    <div class="bestseller_img">
+                                        <img src="./image/P3-Img-indoor-1.jpg" alt="Morning Dew 晨露">
+                                    </div>
+                                    <div class="bestseller_content">
                                         <span class="en_prod_name">Midnight Romance</span><br>
                                         <span class="ch_prod_name">-午夜戀曲-</span><br>
                                         <span class="ch_prod_name2">NT$</span>
                                         <span class="en_prod_money">2,099</span>
-                                    </figcaption>
-                                </figure>
+                                    </div>
+                                </div>
                             </a>
                         </li>
                         <li class="slider responsive">
                             <a href="products.html">
-                                <figure>
-                                    <img src="./image/P3-Img-indoor-2.jpg" alt="Winter Wonderland 冬日仙境">
-                                    <figcaption>
+                                <div class="bestseller_product">
+                                    <div class="bestseller_img">
+                                        <img src="./image/P3-Img-indoor-2.jpg" alt="Winter Wonderland 冬日仙境">
+                                    </div>
+                                    <div class="bestseller_content">
                                         <span class="en_prod_name">Inspiring Springs</span><br>
                                         <span class="ch_prod_name">-靈感源泉-</span><br>
                                         <span class="ch_prod_name2">NT$</span>
                                         <span class="en_prod_money">2,599</span>
-                                    </figcaption>
-                                </figure>
+                                    </div>
+                                </div>
                             </a>
                         </li>
                         <li class="slider responsive">
                             <a href="products.html">
-                                <figure>
-                                    <img src="./image/P3-Img-indoor-3.jpg" alt="Sunny Skies 晴空萬里">
-                                    <figcaption>
+                                <div class="bestseller_product">
+                                    <div class="bestseller_img">
+                                        <img src="./image/P3-Img-indoor-3.jpg" alt="Sunny Skies 晴空萬里">
+                                    </div>
+                                    <div class="bestseller_content">
                                         <span class="en_prod_name">Timeless Elegance</span><br>
                                         <span class="ch_prod_name">-時光倩影-</span><br>
                                         <span class="ch_prod_name2">NT$</span>
                                         <span class="en_prod_money">2,399</span>
-                                    </figcaption>
-                                </figure>
+                                    </div>
+                                </div>
                             </a>
                         </li>
                         <li class="slider responsive">
                             <a href="products.html">
-                                <figure>
-                                    <img src="./image/P3-Img-indoor-4.jpg" alt="Love of Bluebird 青鳥之戀">
-                                    <figcaption>
+                                <div class="bestseller_product">
+                                    <div class="bestseller_img">
+                                        <img src="./image/P3-Img-indoor-4.jpg" alt="Love of Bluebird 青鳥之戀">
+                                    </div>
+                                    <div class="bestseller_content">
                                         <span class="en_prod_name">Strolling through Time</span><br>
                                         <span class="ch_prod_name">-時光漫步-</span><br>
                                         <span class="ch_prod_name2">NT$</span>
                                         <span class="en_prod_money">1,699</span>
-                                    </figcaption>
-                                </figure>
+                                    </div>
+                                </div>
                             </a>
                         </li>
                     </ul>
@@ -404,9 +487,9 @@
                         <img src="./image/P3-font-Indoor Flower.png" alt="熱門商品：婚禮花束">
                     </div>
                 </div>
-                <div class="view_all">
-                    <a href="shop.html">　View All　</a>
-                </div>
+            </div>
+            <div class="view_all">
+                <a href="shop.html">　View All　</a>
             </div>
         </section>
         <!-- 送禮指南 -->
@@ -418,7 +501,7 @@
                 <p class="giftIdeas_p">送禮指南<br>幫助正在挑選禮物的你</p>
             </div>
             <div class="list_box_giftIdeas">
-                <div class="accordion" id="accordionExample">
+                <div class="accordion-giftIdeas" id="accordionExample">
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingOne">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -490,7 +573,7 @@
                     </div>
                 </div>
             </div>
-            
+
         </section>
         <!-- 購物流程 -->
         <section id="process">
@@ -499,35 +582,35 @@
                     <span class="en_title">Shopping Process<span class="ch_title"> / 購物流程</span>
                 </h2>
             </div>
-            <div class="list_box_process">
-                <figure class="figure_process">
+            <div class="item_process">
+                <div class="list_box_process">
                     <img src="./image/P5-Img-cash.svg" alt="下單付款">
-                    <figcaption class="figcaption_process">
-                        <span>下單付款</span><br>
-                        <span>本店花禮皆為接單訂製，須於付款完成後才會進行製作</span>
-                    </figcaption>
-                </figure>
-                <figure class="figure_process">
+                    <div class="list_box_process_span">
+                        <p>下單付款</p>
+                        <p>本店花禮皆為接單訂製，須於付款完成後才會進行製作</p>
+                    </div>
+                </div>
+                <div class="list_box_process">
                     <img src="./image/P5-Img-time.svg" alt="製作時程">
-                    <figcaption class="figcaption_process">
-                        <span>製作時程</span><br>
-                        <span>一般商品製作時間5-7天，客製商品製作則需7-10天</span>
-                    </figcaption>
-                </figure>
-                <figure class="figure_process">
+                    <div class="list_box_process_span">
+                        <p>製作時程</p>
+                        <p>一般商品製作時間5-7天，客製商品製作則需7-10天</p>
+                    </div>
+                </div>
+                <div class="list_box_process">
                     <img src="./image/P5-Img-car.svg" alt="包裝出貨">
-                    <figcaption class="figcaption_process">
-                        <span>包裝出貨</span><br>
-                        <span>可選擇宅配、自取、代客送花等方式，全館商品免運費</span>
-                    </figcaption>
-                </figure>
-                <figure class="figure_process">
+                    <div class="list_box_process_span">
+                        <p>包裝出貨</p>
+                        <p>可選擇宅配、自取、代客送花等方式，全館商品免運費</p>
+                    </div>
+                </div>
+                <div class="list_box_process">
                     <img src="./image/P5-Img-mes.svg" alt="送達通知">
-                    <figcaption class="figcaption_process">
-                        <span>送達通知</span><br>
-                        <span>代客送花將於送貨成功時拍照告知，為您追蹤心意進度</span>
-                    </figcaption>
-                </figure>
+                    <div class="list_box_process_span">
+                        <p>送達通知</p>
+                        <p>代客送花將於送貨成功時拍照告知，為您追蹤心意進度</p>
+                    </div>
+                </div>
             </div>
         </section>
         <!-- 客戶案例 -->
@@ -537,37 +620,44 @@
                     <span class="en_title">Cases<span class="ch_title"> / 客戶案例</span>
                 </h2>
             </div>
-            <!-- <div class="list_box_cases"> -->
             <div class="slider_main">
                 <div class="slider slider-nav">
-                    <figure>
-                        <img src="./image/P5-Img-cases-1.jpg" alt="客戶案例：Glorious Night瑰麗之夜">
-                        <figcaption>
-                            <span>Glorious Night瑰麗之夜</span>
-                            <span>Size：28cm</span>
-                        </figcaption>
-                    </figure>
-                    <figure>
-                        <img src="./image/P5-Img-cases-2.jpg" alt="客戶案例：Rose Garden玫瑰園">
-                        <figcaption>
-                            <span>Rose Garden玫瑰園</span>
-                            <span>Size：35cm</span>
-                        </figcaption>
-                    </figure>
-                    <figure>
-                        <img src="./image/P5-Img-cases-3.jpg" alt="客戶案例：Ocean Breeze海風拂面">
-                        <figcaption>
-                            <span>Ocean Breeze海風拂面</span>
-                            <span>Size：35cm</span>
-                        </figcaption>
-                    </figure>
-                    <figure>
-                        <img src="./image/P5-Img-cases-4.jpg" alt="客戶案例：Sweet Fragrance香甜芬芳">
-                        <figcaption>
-                            <span>Sweet Fragrance香甜芬芳</span>
-                            <span>Size：25cm</span>
-                        </figcaption>
-                    </figure>
+                    <div class="cases_item">
+                        <div class="cases_wrapper">
+                            <img src="./image/P5-Img-cases-1.jpg" alt="客戶案例：Glorious Night瑰麗之夜">
+                            <div class="cases_content">
+                                <span>Glorious Night瑰麗之夜</span>
+                                <span>Size：28cm</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cases_item">
+                        <div class="cases_wrapper">
+                            <img src="./image/P5-Img-cases-2.jpg" alt="客戶案例：Rose Garden玫瑰園">
+                            <div class="cases_content">
+                                <span>Rose Garden玫瑰園</span>
+                                <span>Size：35cm</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cases_item">
+                        <div class="cases_wrapper">
+                            <img src="./image/P5-Img-cases-3.jpg" alt="客戶案例：Ocean Breeze海風拂面">
+                            <div class="cases_content">
+                                <span>Ocean Breeze海風拂面</span>
+                                <span>Size：35cm</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cases_item">
+                        <div class="cases_wrapper">
+                            <img src="./image/P5-Img-cases-4.jpg" alt="客戶案例：Sweet Fragrance香甜芬芳">
+                            <div class="cases_content">
+                                <span>Sweet Fragrance香甜芬芳</span>
+                                <span>Size：25cm</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="more_cases">
@@ -577,10 +667,12 @@
         <!-- 聯絡我們 -->
         <section id="getInTouch">
             <div class="bg_color"></div>
-            <div class="getInTouch_form">
-                <div class="title_getInTouch">
-                    <h2 class="getInTouch_h2">　Get In Touch　</h2>
-                    <p class="getInTouch_p">有任何問題，請聯繫我們</p>
+            <div class="getInTouch_item">
+                <div class="getInTouch_form">
+                    <div class="title_getInTouch">
+                        <h2 class="getInTouch_h2">　Get In Touch　</h2>
+                        <p class="getInTouch_p">有任何問題，請聯繫我們</p>
+                    </div>
                     <div class="getInTouch_form_list">
                         <form name="member_mod_form" id="member_mod_form">
                             <label class="label_name" for="username">姓名</label>
@@ -600,13 +692,14 @@
                                 <input class="input_send" type="submit" value="送出">
                         </form>
                     </div>
+
                 </div>
-            </div>
-            <div class="container_map">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2149.3457890568952!2d121.55920465282975!3d25.04240968097686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abbf23ce4b3b%3A0xc82b0f87ff7df9dc!2z5p2-5bGx5paH5Ym15ZyS5Y2A!5e0!3m2!1szh-TW!2stw!4v1686292783348!5m2!1szh-TW!2stw"
-                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade" class="map"></iframe>
+                <div class="container_map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2149.3457890568952!2d121.55920465282975!3d25.04240968097686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abbf23ce4b3b%3A0xc82b0f87ff7df9dc!2z5p2-5bGx5paH5Ym15ZyS5Y2A!5e0!3m2!1szh-TW!2stw!4v1686292783348!5m2!1szh-TW!2stw"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade" class="map"></iframe>
+                </div>
             </div>
         </section>
 
@@ -738,7 +831,10 @@
         </footer>
 </body>
 </main>
-
+<!-- banner -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+<!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.jquery.min.js'></script> -->
 <!-- 客戶案例左右切換 -->
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js'></script>

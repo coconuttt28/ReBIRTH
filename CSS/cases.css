@@ -156,6 +156,8 @@
   .slider p{
     width: 200%;
     padding-left: 130%;
+    
+    font-family: 'Noto Serif TC', serif;
   }
   
 }

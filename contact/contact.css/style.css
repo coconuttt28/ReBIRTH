@@ -127,6 +127,11 @@ section {
 .ch_title,
 .getInTouch_p,
 #member_mod_form,
+#username,
+#tel,
+#email,
+#message,
+.input_send,
 .details_p,
 .contact-block p,
 #footer,
@@ -175,26 +180,34 @@ html {
 #topbar {
     background-color: #445251;
     position: fixed;
-    
     top: 0;
     left: 0;
     min-height: 10%;
     width: 100%;
-    padding: 10px 210px 10px 100px;
+    padding: 10px 2vw;
     z-index: 999;
+    display: flex;
+    align-items: center;
 }
 
 .header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 0 auto;
+    width: 100%;
+}
+
+.header li {
+    display: flex;
 }
 
 .logo {
     margin-top: 5px;
-    min-width: 300px;
-    text-align: left;
+}
+
+.logo img {
+    width: 270px;
+    min-width: 200px;
 }
 
 .checkbox_input {
@@ -206,13 +219,10 @@ html {
 }
 
 .header_menu {
-    display: flex;
+    flex: 1;
     justify-content: center;
-    align-items: center;
     letter-spacing: 5px;
     font-family: 'Italiana';
-    position: sticky;
-    text-align: center;
 }
 
 .header_menu li {
@@ -226,9 +236,26 @@ html {
     font-size: 18px;
 }
 
+
+.header_menu a::after {
+    content: "";
+    display: block;
+    position: relative;
+    margin: auto;
+    top: 10px;
+    width: 0;
+    height: 1.5px;
+    background-color: #FFFCF5;
+    transform-origin: center center;
+    transition: all .3s;
+}
+
+.header_menu a:hover::after {
+    width: 2rem;
+}
+
 .header_icon {
     list-style-type: none;
-    text-align: right;
 }
 
 /* 側欄購物車叉叉形式 */
@@ -408,17 +435,21 @@ span {
     padding-bottom: 35px;
 }
 
+
 @media (max-width: 1253px) {
-    #topbar {
-        padding: 10px 50px;
+
+    .logo {
+        min-width: 200px;
+        height: 100%;
     }
 
-    .header {
-        justify-content: center;
+    .logo img {
+        max-width: 200px;
+        min-width: 200px;
     }
 }
 
-@media (max-width: 1110px) {
+@media (max-width: 992px) {
     #topbar {
         padding: 10px 20px;
     }
@@ -447,23 +478,12 @@ span {
         background-size: cover;
     }
 
-    .logo {
-        min-width: 200px;
-        height: 100%;
-    }
-
-    .logo img{
-        max-width: 200px;
-        min-width: 200px;
-    }
-
     /* 右側設置 */
 
     .rwd_right {
         display: flex;
         justify-content: flex-end;
         align-items: center;
-        height: 8vh;
     }
 
     /* 漢堡列表 */
@@ -518,28 +538,34 @@ span {
         cursor: pointer;
         text-align: right;
         height: 28px;
-        width: 44px;
+        width: 30px;
         background-image: url(../image/hambergermenu.svg);
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
-        margin-left: 15px;
+    }
+}
+
+@media (max-width:768px) {
+    #topbar {
+        padding: 10px 15px;
+        min-height: 72.06px;
+    }
+}
+
+@media (max-width:576px) {
+    .overlay {
+        overflow-y: auto;
     }
 
-    @media screen and (max-height: 450px) {
-        .overlay {
-            overflow-y: auto;
-        }
+    .overlay a {
+        font-size: 20px
+    }
 
-        .overlay a {
-            font-size: 20px
-        }
-
-        .overlay .closebtn {
-            font-size: 40px;
-            top: 15px;
-            right: 35px;
-        }
+    .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
     }
 }
 
@@ -583,29 +609,40 @@ section {
     display: flex;
     position: relative;
     flex-direction: row;
-    justify-content: space-around;
-    align-items: flex-start;
+    align-items: flex-end;
     min-height: 100vh;
     width: 100%;
     background-color: #FFFCF5;
-    overflow-y: auto;
 }
 
 .both {
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
     flex: 1;
+    min-height: 90vh;
+}
+
+.tab-contact {
+    width: 100%;
+}
+
+.getInTouch_item {
+    padding-top: 10vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
 }
 
 .getInTouch_form {
     display: none;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
     flex-direction: column;
-    padding-top: 10vh;
-    padding-top: calc(10vh + 50px);
-    flex: 1;
-    max-height: 100%;
+    min-height: 90vh;
 }
 
 .title_getInTouch {
@@ -613,23 +650,40 @@ section {
     color: #4D5139;
     letter-spacing: 3px;
     line-height: 1.5;
+    width: 466px;
+    min-width: 350px;
 }
 
-.getInTouch_h2 {
-    font-size: 64px;
+.getInTouch_h2,
+.details_h2 {
+    font-size: 44px;
     white-space: nowrap;
     margin-bottom: 15px;
     border-bottom: 3px solid #445251;
 }
 
 .getInTouch_p {
-    font-size: 20px;
+    font-size: 16px;
+}
+
+.getInTouch_form_list {
+    width: 466px;
+    min-width: 350px;
 }
 
 #member_mod_form {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+textarea {
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    line-height: 1.5;
 }
 
 label[for="username"],
@@ -680,128 +734,60 @@ input[type="submit"] {
     border: none;
     height: 44px;
     width: 104px;
-    text-align: center;
-    margin-top: 40px;
     font-size: 14px;
     letter-spacing: 3px;
     transition: all 0.6s;
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+
 }
 
 input[type="submit"]:hover {
     background-color: #2f3837;
 }
 
+.contact_tab {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 40px;
+}
+
 .container_map {
     position: relative;
-    min-height: 90vh;
-    /* 不要設定最小寬度min */
+    height: 90vh;
     flex: 1;
-    bottom: 0;
-    right: 0;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
     flex-direction: column;
-    margin-top: 10vh;
+    justify-content: center;
+    width: 70%;
+    min-width: 350px;
 }
 
 .map {
-    position: relative;
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    min-height: 100%;
-    background-color: rgba(77, 81, 56, 0.5);
+    width: 80%;
+    min-width: 350px;
+    min-height: 83%;
 }
 
-@media (max-width: 1370px) {
-    #getInTouch {
-        min-height: 100vh;
-    }
-
-    .getInTouch_h2 {
-        font-size: 48px;
-    }
-
-    .details .details_h2 {
-        font-size: 48px;
-    }
-
-    .details .details_h2::after {
-        width: 85%;
-    }
-
-    .both,
-    .details {
-        max-height: 100%;
-    }
+.contact_item {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    height: 63vh;
 }
-
-
-@media (max-width: 992px) {
-    .container_map {
-        position: relative;
-        min-height: 90vh;
-        /* 不要設定最小寬度min */
-        flex: 1;
-        bottom: 0;
-        right: 0;
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        flex-direction: column;
-        margin-top: 10vh;
-    }
-
-    .map {
-        position: relative;
-        bottom: 0;
-        right: 0;
-        width: 100%;
-        min-height: 100%;
-        background-color: rgba(77, 81, 56, 0.5);
-    }
-
-    .contact-block.clock {
-        margin-bottom: 212px;
-    }
-}
-
-/* @media (max-width: 768px) {
-    .getInTouch_form {
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        flex-direction: column;
-        padding-top: calc(10vh + 50px);
-        width: 100%;
-        max-height: 100%;
-    }
-
-    .details {
-        position: flex;
-        align-items: center;
-        justify-content: flex-end;
-        flex-direction: column;
-        padding-top: calc(10vh + 50px);
-        flex: 1;
-        max-height: 100%;
-    }
-
-} */
-
-@media (max-width: 576px) {}
-
 
 .tab {
     display: flex;
-    position: relative;
-    justify-content: right;
+    justify-content: flex-end;
     align-items: center;
-    text-align: center;
-    bottom: 33px;
-    right: 0;
+    height: 44px;
     width: 100%;
+    white-space: nowrap;
 }
 
 .tab p {
@@ -848,12 +834,12 @@ input[type="submit"]:hover {
 /* Contact Details */
 .details {
     position: relative;
+    display: flex;
     align-items: center;
-    justify-content: flex-end;
     flex-direction: column;
-    padding-top: calc(10vh + 50px);
-    flex: 1;
-    max-height: 100%;
+    justify-content: center;
+    min-height: 90vh;
+    width: 100%;
 }
 
 .title_details {
@@ -861,28 +847,12 @@ input[type="submit"]:hover {
     color: #4D5139;
     letter-spacing: 3px;
     line-height: 1.5;
-}
-
-.details_h2 {
-    position: relative;
-    font-size: 64px;
-    white-space: nowrap;
-    margin-bottom: 15px;
-}
-
-.details_h2::after {
-    content: "";
-    position: absolute;
-    bottom: -2px;
-    left: 50%;
-    transform: translateX(-50%);
-    height: 3px;
-    width: 111%;
-    background-color: #445251;
+    min-width: 350px;
+    width: 466px;
 }
 
 .details_p {
-    font-size: 20px;
+    font-size: 16px;
 }
 
 .contact_info {
@@ -890,7 +860,7 @@ input[type="submit"]:hover {
     align-items: flex-start;
     flex-direction: column;
     text-align: left;
-    margin-top: 80px;
+    margin-top: 23px;
 }
 
 .contact-block {
@@ -916,9 +886,113 @@ input[type="submit"]:hover {
     white-space: nowrap;
 }
 
-.contact-block.clock {
-    margin-bottom: 237px;
+
+@media (max-width: 768px) {
+    #getInTouch {
+        padding: 0px 90px;
+    }
+
+    .getInTouch_item {
+        padding-top: 72.06px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .tab-content,
+    .both {
+        width: 100%;
+    }
+
+    .title_getInTouch,
+    .getInTouch_form_list,
+    .title_details,
+    .contact_item {
+        width: 100%;
+    }
+
+    .container_map {
+        width: 100%;
+        min-width: 100%;
+        padding: 20px 0;
+    }
+
+    .map {
+        min-width: 100%;
+    }
+
+    .contact-block.clock {
+        margin-bottom: 212px;
+    }
+
+    .both {
+        min-height: auto;
+    }
 }
+
+@media (max-width: 576px) {
+    #getInTouch {
+        padding: 0px 20px;
+    }
+
+    .getInTouch_h2,
+    .details_h2 {
+        font-size: 36px;
+    }
+
+    .getInTouch_p,
+    label[for="username"],
+    [for="tel"],
+    [for="email"],
+    [for="message"],
+    .tab p {
+        font-size: 14px;
+    }
+
+    .contact-block p.info {
+        font-size: 14px;
+        white-space: wrap;
+    }
+
+    input[type="text"],
+    input[type="tel"],
+    input[type="email"],
+    textarea {
+        font-size: 12px;
+        letter-spacing: 0.5px;
+        line-height: 1.5;
+    }
+
+    input[type="submit"] {
+        font-size: 12px;
+        height: 35px;
+        width: 85px;
+    }
+
+    .tab {
+        height: 35px;
+    }
+
+    .contact_item {
+        height: 61vh;
+    }
+
+    .getInTouch_form_list,
+    .title_getInTouch {
+        width: 100%;
+        min-width: 100%;
+    }
+
+    .contact-block.clock {
+        margin-bottom: 153px;
+    }
+
+    .tab img {
+        height: 15px;
+        width: 15px;
+    }
+}
+
 
 /* footer */
 #footer {
@@ -1111,7 +1185,7 @@ input[type="submit"]:hover {
     #footer {
         display: flex;
         width: 100%;
-        padding: 50px 20px;
+        padding: 50px 100px;
         margin: 0 auto;
         background-color: #445251;
         right: 0;
@@ -1127,6 +1201,7 @@ input[type="submit"]:hover {
         text-align: center;
         letter-spacing: 3px;
         line-height: 1.5;
+        font-size: 14px;
     }
 
     .footer_left {
@@ -1176,6 +1251,11 @@ input[type="submit"]:hover {
         transition: 0.4s;
     }
 
+    .rwd_footer_list .active {
+        display: flex;
+        justify-content: space-between;
+    }
+
     .accordion:hover {
         background-color: #d6d8c966;
     }
@@ -1194,14 +1274,8 @@ input[type="submit"]:hover {
     }
 
     /* 列表減號 */
-    .active:after {
-        content: "";
-        height: 18px;
-        width: 18px;
+    .accordion.active:after {
         background-image: url(../image/footer_minus.svg);
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
     }
 
     .footer_panel {
@@ -1232,5 +1306,43 @@ input[type="submit"]:hover {
         content: "";
         background-color: #d6d8c966;
         color: #FFFCF5;
+    }
+}
+
+@media (max-width: 576px) {
+    #footer {
+        padding: 50px 20px;
+    }
+
+    .accordion {
+        font-size: 12px;
+    }
+
+    .accordion:after,
+    .accordion.active:after {
+        height: 14px;
+        width: 14px;
+    }
+
+    .footer_icon_list a {
+        width: 38px;
+        height: 38px;
+    }
+
+    .footer_logo {
+        min-width: 200px;
+    }
+
+    .footer_address,
+    .footer_panel a {
+        font-size: 12px;
+    }
+
+    .footer_address p {
+        line-height: 2.0;
+    }
+
+    .footer_copyright {
+        font-size: 12px;
     }
 }

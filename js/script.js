@@ -49,31 +49,90 @@ function closeForm() {
 }
 
 // banner
-function bannerSwitcher() {
-    var current = $('.sec-1-input').filter(':checked');
-    var next = current.next('.sec-1-input');
+$(function () {
+    $('.carousel-item-banner').eq(0).addClass('active');
+    var total = $('.carousel-item-banner').length;
+    var current = 0;
+    var autoSlideInterval;
 
-    if (next.length) {
-        current.removeClass('active');
-        next.prop('checked', true).addClass('active');
-    } else {
-        current.removeClass('active');
-        $('.sec-1-input').first().prop('checked', true).addClass('active');
+    function startAutoSlide() {
+        autoSlideInterval = setInterval(autoSlide, 5000);
     }
 
-    var activeBanner = $('.banner.active');
-    var nextBanner = activeBanner.next('.banner');
-
-    if (nextBanner.length) {
-        activeBanner.removeClass('active');
-        nextBanner.addClass('active');
-    } else {
-        activeBanner.removeClass('active');
-        $('.banner').first().addClass('active');
+    function stopAutoSlide() {
+        clearInterval(autoSlideInterval);
     }
-}
 
-setInterval(bannerSwitcher, 5000);
+    function autoSlide() {
+        var next = current + 1;
+        if (next >= total) {
+            next = 0;
+        }
+        setSlide(current, next);
+        current = next;
+    }
+
+    function setSlide(prev, next) {
+        $('.carousel-item-banner').eq(prev).removeClass('active');
+        $('.carousel-item-banner').eq(next).addClass('active');
+    }
+
+    // 開始自動輪播
+    startAutoSlide();
+
+    $('#moveRight').on('click', function () {
+        var next = current + 1;
+        if (next >= total) {
+            next = 0;
+        }
+        setSlide(current, next);
+        current = next;
+        stopAutoSlide();
+        startAutoSlide();
+    });
+
+    $('#moveLeft').on('click', function () {
+        var prev = current - 1;
+        if (prev < 0) {
+            prev = total - 1;
+        }
+        setSlide(current, prev);
+        current = prev;
+        stopAutoSlide();
+        startAutoSlide();
+    });
+});
+
+
+
+// banner
+// function bannerSwitcher() {
+//     var current = $('.sec-1-input').filter(':checked');
+//     var next = current.next('.sec-1-input');
+
+//     if (next.length) {
+//         current.removeClass('active');
+//         next.prop('checked', true).addClass('active');
+//     } else {
+//         current.removeClass('active');
+//         $('.sec-1-input').first().prop('checked', true).addClass('active');
+//     }
+
+//     var activeBanner = $('.banner.active');
+//     var nextBanner = activeBanner.next('.banner');
+
+//     if (nextBanner.length) {
+//         activeBanner.removeClass('active');
+//         nextBanner.addClass('active');
+//     } else {
+//         activeBanner.removeClass('active');
+//         $('.banner').first().addClass('active');
+//     }
+// }
+
+// setInterval(bannerSwitcher, 5000);
+
+
 
 // feature
 const spaceHolder = document.querySelector('.space-holder');
@@ -140,7 +199,21 @@ $('.slider-nav').slick({
     slidesToShow: 3,
     slidesToScroll: 1,
     dots: false,
-    focusOnSelect: true
+    focusOnSelect: true,
+    responsive: [
+        {
+            breakpoint: 993,
+            settings: {
+                slidesToShow: 2,
+            }
+        },
+        {
+            breakpoint: 577,
+            settings: {
+                slidesToShow: 3,
+            }
+        }
+    ]
 });
 
 // 表單-電話限制
