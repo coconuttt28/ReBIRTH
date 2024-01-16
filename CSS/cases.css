@@ -139,7 +139,7 @@
 
 .slider p{
   width: 240%;
-  height: 20vh;
+  height: 13vh;
   font-size: 18px;
   padding-top: 50px;
   padding-left: 150%;
@@ -152,12 +152,22 @@
 
 }
 
+@media (max-width: 1512px) {
+  .slider p{
+    width: 200%;
+    padding-left: 120%;
+    height: 15vh;
+  }
+  
+}
+
 @media (max-width: 1024px) {
   .slider p{
     width: 200%;
     padding-left: 130%;
     
     font-family: 'Noto Serif TC', serif;
+    height: 18vh;
   }
   
 }
