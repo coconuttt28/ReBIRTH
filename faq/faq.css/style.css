@@ -785,7 +785,7 @@ section {
 .footer_copyright {
     position: absolute;
     color: #FFFCF5;
-    white-space: nowrap;
+/*     white-space: nowrap; */
     text-align: center;
     bottom: 15px;
     left: 50%;
