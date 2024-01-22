@@ -598,12 +598,12 @@ section {
     width: 100%;
     margin: 0 auto;
     background-color: #FFFCF5;
-    margin-top: 4.9%;
+    margin-top: 10vh;
 }
 
 .banner_faq {
     background-image: url(../image/bg_banner.jpg);
-    background-size: auto 2580px;
+    background-size: auto 2780px;
     background-position: center -1200px;
     background-repeat: no-repeat;
     position: relative;
@@ -711,6 +711,10 @@ section {
 }
 
 @media (max-width: 768px) {
+    #faq {
+        margin-top:72.06px
+    }
+
     .faq_list_item_text {
         width: 496px;
     }
