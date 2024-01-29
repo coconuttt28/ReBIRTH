@@ -1,5 +1,3 @@
-
-
 // navbar rwd list
 /* Open */
 function openNav() {
@@ -102,36 +100,6 @@ $(function () {
         startAutoSlide();
     });
 });
-
-
-
-// banner
-// function bannerSwitcher() {
-//     var current = $('.sec-1-input').filter(':checked');
-//     var next = current.next('.sec-1-input');
-
-//     if (next.length) {
-//         current.removeClass('active');
-//         next.prop('checked', true).addClass('active');
-//     } else {
-//         current.removeClass('active');
-//         $('.sec-1-input').first().prop('checked', true).addClass('active');
-//     }
-
-//     var activeBanner = $('.banner.active');
-//     var nextBanner = activeBanner.next('.banner');
-
-//     if (nextBanner.length) {
-//         activeBanner.removeClass('active');
-//         nextBanner.addClass('active');
-//     } else {
-//         activeBanner.removeClass('active');
-//         $('.banner').first().addClass('active');
-//     }
-// }
-
-// setInterval(bannerSwitcher, 5000);
-
 
 
 // feature
@@ -304,15 +272,8 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
-// gotop隨背景修改顏色
-// const body = document.querySelector('body');
-// const backgroundColor = getComputedStyle(body).backgroundColor;
 
-// 根據背景修改不同顏色的gotop
-// const btnGotop = document.querySelector('.btn-gotop');
-
-// if (backgroundColor === 'rgb(255, 252, 245)') {
-//     btnGotop.classList.add('light-background');
-// } else if (backgroundColor === 'rgb(68, 82, 81)') {
-//     btnGotop.classList.add('dark-background');
-// }
+Swal.fire({
+    text: "本網站為練習作品，非正式官方網站，資訊均非正式內容。若網站中有表單填寫，僅此示意，並無任何後台功能，不會對外蒐集個人資料，特此申明。",
+    icon: "info"
+  });
