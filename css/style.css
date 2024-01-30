@@ -1,16 +1,6 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Italiana&family=Noto+Serif+TC:wght@200&display=swap');
 
-/* @font-face {
-    font-family: 'Italiana';
-    src: url('../webfonts/Italiana-Regular.ttf');
-}
-
-@font-face {
-    font-family: 'Noto Serif TC', serif;
-    src: url('../webfonts/NotoSerifTC-Regular.otf');
-} */
-
 /* google font一定要放在第二行，上面只能有UTF */
 /* http://meyerweb.com/eric/tools/css/reset/ 
 v2.0 | 20110126
@@ -155,6 +145,7 @@ section {
 .carousel-item__container,
 .carousel-item__title,
 .carousel-item__btn,
+.bestSeller_tab,
 .ch_content_title,
 .ch_content_description,
 .ch_prod_name .bestSeller_tab a,
@@ -1474,7 +1465,8 @@ section {
 }
 
 .giftIdeas_bg {
-    background: url(../image/P4-Img-bg.jpg);
+    /* background: url(../image/P4-Img-bg.jpg); */
+    background: url(../image/pexels-cottonbro-studio-4273467.jpg);
     background-size: cover;
     background-position: center;
     background-position-x: -10px;
