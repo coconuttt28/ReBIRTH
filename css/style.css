@@ -1469,8 +1469,8 @@ section {
     background: url(../image/pexels-cottonbro-studio-4273467.jpg);
     background-size: cover;
     background-position: center;
-    background-position-x: -10px;
-    background-position-y: -50px;
+    /* background-position-x: -10px;
+    background-position-y: -50px; */
     position: fixed;
     width: 100%;
     height: 155%;
@@ -1489,11 +1489,11 @@ section {
 }
 
 /* 背景線性漸層 */
-#giftIdeas::before {
+/* #giftIdeas::before {
     content: "";
     height: 100%;
     background-image: linear-gradient(119.61deg, rgba(68, 82, 81, 0.25) 19.49%, rgba(255, 252, 245, 0) 70.25%);
-}
+} */
 
 .bg_color {
     height: 10vh;
@@ -1658,10 +1658,10 @@ section {
 }
 
 @media (max-width:992px) {
-    .giftIdeas_bg {
-        background-position-x: -250px;
+    /* .giftIdeas_bg {
+        background-position-x: -350px;
         background-position-y: 100px;
-    }
+    } */
 }
 
 @media (max-width:768px) {
@@ -1670,9 +1670,9 @@ section {
         padding-right: 90px;
     }
 
-    .giftIdeas_bg {
+    /* .giftIdeas_bg {
         background-position-x: -350px;
-    }
+    } */
 
     .bg_color {
         height: 72.06px;
@@ -1686,10 +1686,10 @@ section {
         padding-right: 20px;
     }
 
-    .giftIdeas_bg {
+    /* .giftIdeas_bg {
         background-position-x: -550px;
         background-position-y: 50px;
-    }
+    } */
 
     .giftIdeas_h2 {
         font-size: 36px;
