@@ -594,6 +594,10 @@ span {
         top: 15px;
         right: 35px;
     }
+
+    .offcanvas {
+        max-width: 300px;
+    }
 }
 
 /* 頁面共用區 */
