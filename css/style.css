@@ -1605,10 +1605,6 @@ section {
     width: 374px;
     height: 128px;
     padding-left: 35px;
-    text-shadow: -1px -1px 0 #efe4d1,
-              1px -1px 0 #efe4d1,
-              -1px 1px 0 #efe4d1,
-              1px 1px 0 #efe4d1;
 }
 
 .flower_meaning_link {
@@ -1692,11 +1688,6 @@ section {
         padding-right: 20px;
     }
 
-    /* .giftIdeas_bg {
-        background-position-x: -550px;
-        background-position-y: 50px;
-    } */
-
     .giftIdeas_h2 {
         font-size: 36px;
         width: 300px;
@@ -1720,6 +1711,10 @@ section {
     .accordion-body a {
         font-size: 14px;
         width: 300px;
+        text-shadow: -1px -1px 0 #efe4d1,
+            1px -1px 0 #efe4d1,
+            -1px 1px 0 #efe4d1,
+            1px 1px 0 #efe4d1;
     }
 
     .flower_meaning_link {
