@@ -1750,20 +1750,18 @@ input[type='radio'],input[type='checkbox']{
 #footer {
   display: flex;
   position: relative;
+  flex-direction: column;
   width: 100%;
   min-height: 35vh;
-  padding: 50px 210px;
+  padding: 50px 210px 30px;
   background-color: #445251;
   right: 0;
   bottom: 0;
-  font-family: 'Noto Serif TC', serif;
 }
 
 .footer_all {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  text-align: center;
   width: 100%;
 }
 
@@ -1773,7 +1771,6 @@ input[type='radio'],input[type='checkbox']{
   text-align: left;
   flex-direction: column;
   justify-content: space-between;
-  height: 100%;
 }
 
 .footer_logo {
@@ -1788,22 +1785,13 @@ input[type='radio'],input[type='checkbox']{
   line-height: 1.5;
 }
 
-/* 中間 */
-.footer_copyright {
-  position: absolute;
-  color: #FFFCF5;
-  white-space: nowrap;
-  text-align: center;
-  bottom: 5px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 14px;
-  line-height: 20px;
-}
-
 /* 右側 */
 .footer_right {
   text-align: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
 }
 
 .footer_list {
@@ -1900,7 +1888,6 @@ input[type='radio'],input[type='checkbox']{
 /* RWD新增right區塊 */
 .rwd_footer_list {
   display: none;
-  font-family: 'Noto Serif TC', serif;
 }
 
 .btn-gotop {
@@ -1930,9 +1917,22 @@ input[type='radio'],input[type='checkbox']{
   border: 50px
 }
 
+
+/* copyright */
+.footer_copyright {
+  display: flex;
+  color: #FFFCF5;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  font-size: 14px;
+  line-height: 20px;
+  margin-top: 2rem;
+}
+
 @media (max-width: 1253px) {
   #footer {
-      padding: 50px 50px;
+      padding: 50px 50px 30px;
   }
 }
 
@@ -1957,7 +1957,6 @@ input[type='radio'],input[type='checkbox']{
       letter-spacing: 3px;
       line-height: 1.5;
       font-size: 14px;
-      font-family: 'Noto Serif TC', serif;
   }
 
   .footer_left {
@@ -2100,5 +2099,6 @@ input[type='radio'],input[type='checkbox']{
 
   .footer_copyright {
       font-size: 12px;
+
   }
 }
