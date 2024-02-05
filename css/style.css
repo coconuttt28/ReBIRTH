@@ -1711,10 +1711,10 @@ section {
     .accordion-body a {
         font-size: 14px;
         width: 300px;
-        text-shadow: -1px -1px 0 #efe4d1,
-            1px -1px 0 #efe4d1,
-            -1px 1px 0 #efe4d1,
-            1px 1px 0 #efe4d1;
+        text-shadow: -0.5px -0.5px 0 #efe4d1,
+            0.5px -0.5px 0 #efe4d1,
+            -0.5px 0.5px 0 #efe4d1,
+            0.5px 0.5px 0 #efe4d1;
     }
 
     .flower_meaning_link {

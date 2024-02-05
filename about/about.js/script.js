@@ -85,16 +85,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 })
 
-// about bg
-// $(window).scroll(function (e) {
-//     parallax();
-// });
-
-// function parallax() {
-//     var scrolled = $(window).scrollTop();
-//     $('.about_banner').css('top', -(scrolled * 0.15) + 'px');
-// }
-
 // 花藝師團隊左右切換
 $('.slider-nav').slick({
     slidesToShow: 3,
@@ -104,35 +94,8 @@ $('.slider-nav').slick({
 });
 
 
-// 左右切換RWD
-// $(document).ready(function() {
-//     // 初始化Slick Slider
-//     function initSlider() {
-//         var windowWidth = $(window).width();
-
-//         if (windowWidth < 1110) {
-//             $('.slider-nav').slick({
-//                 slidesToShow: 2,
-//                 slidesToScroll: 1,
-//                 dots: false,
-//                 focusOnSelect: true
-//             });
-//         } else {
-//             $('.slider-nav').slick({
-//                 slidesToShow: 3,
-//                 slidesToScroll: 1,
-//                 dots: false,
-//                 focusOnSelect: true
-//             });
-//         }
-//     }
-
-//     // 初始化页面加载时的Slider
-//     initSlider();
-
-//     // 监听窗口大小变化，根据条件重新初始化Slider
-//     $(window).resize(function() {
-//         initSlider();
-//     });
-// });
+Swal.fire({
+    text: "本網站為練習作品，非正式官方網站，資訊均非正式內容。若網站中有表單填寫，僅此示意，並無任何後台功能，不會對外蒐集個人資料，特此申明。",
+    icon: "info"
+  });
 

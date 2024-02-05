@@ -157,7 +157,7 @@ document.addEventListener('DOMContentLoaded', function() {
     toggleSection('traffic_info'); // 顯示 traffic_info
 });
 
-// function adjustSectionDisplay(sectionId, displayValue) {
-//     var section = document.getElementById(sectionId);
-//     section.style.display = displayValue;
-// }
+Swal.fire({
+    text: "本網站為練習作品，非正式官方網站，資訊均非正式內容。若網站中有表單填寫，僅此示意，並無任何後台功能，不會對外蒐集個人資料，特此申明。",
+    icon: "info"
+  });
