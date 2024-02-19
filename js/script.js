@@ -202,12 +202,6 @@ function formatPhoneNumber(input) {
     input.value = formattedPhoneNumber;
 }
 
-// // 等待頁面加載完成
-// window.addEventListener('load', function () {
-//     // 將滾動位置重置到頂部
-//     window.scrollTo(0, 0);
-// });
-
 // gotop
 let requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
 

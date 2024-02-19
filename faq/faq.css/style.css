@@ -596,7 +596,6 @@ section {
     justify-content: flex-start;
     min-height: 180vh;
     width: 100%;
-    margin: 0 auto;
     background-color: #FFFCF5;
     margin-top: 10vh;
 }
@@ -721,8 +720,11 @@ section {
 }
 
 @media (max-width: 576px) {
+    #faq{
+        padding: 0 20px;
+    }
     .faq_list_item_text {
-        width: 456px;
+        width: 326px;
     }
 
     .title_faq h2 {
@@ -737,6 +739,10 @@ section {
         padding-top: 0;
         padding-bottom: 50px;
         padding: 0 20px 50px 20px;
+    }
+
+    .bg_faq {
+        width: 345px;
     }
 }
 
