@@ -26,12 +26,55 @@
 
             <!-- 普通列表 -->
             <ul class="header_menu">
-                <li><a href="about.html">About</a></li>
-                <li><a href="shop.html">Shop</a></li>
-                <li><a href="custom.html">Custom</a></li>
-                <li><a href="cases.html">Cases</a></li>
-                <li><a href="faq.html">F&Q</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li>
+                    <a href="about.html" class="special-link">About</a>
+                    <ul class="dropdown_menu">
+                        <li><a href="about.html">關於我們</a></li>
+                        <li><a href="about.html#team">花藝師團隊</a></li>
+                        <li><a href="about.html#flowerMean">花語介紹</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="shop.html" class="special-link">Shop</a>
+                    <ul class="dropdown_menu">
+                        <li><a href="shop.html#onlineShop">婚禮花束</a></li>
+                        <li><a href="shop.html#onlineShop">贈禮花束</a></li>
+                        <li><a href="shop.html#onlineShop">居家裝飾</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="custom.html" class="special-link">Custom</a>
+                    <ul class="dropdown_menu">
+                        <li><a href="custom.html#steps">代客送花</a></li>
+                        <li><a href="custom.html#custom_full">全客製化</a></li>
+                        <li><a href="custom.html#custom_half">半客製化</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="cases.html" class="special-link">Cases</a>
+                    <ul class="dropdown_menu">
+                        <li><a href="cases.html#case_gift">贈禮類別</a></li>
+                        <li><a href="cases.html#case_wed">婚禮類別</a></li>
+                        <li><a href="cases.html#case_in">居家類別</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="faq.html" class="special-link">F&Q</a>
+                    <ul class="dropdown_menu">
+                        <li><a href="faq.html#faq_q1">何為永生花</a></li>
+                        <li><a href="faq.html#faq_q2">運送包裝</a></li>
+                        <li><a href="faq.html#faq_q3">運費價格</a></li>
+                        <li><a href="faq.html#faq_q4">售後服務</a></li>
+                        <li><a href="faq.html#faq_q5">後續保養</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="contact.html" class="special-link">Contact</a>
+                    <ul class="dropdown_menu">
+                        <li><a href="contact.html#traffic_info">店鋪資訊</a></li>
+                        <li><a href="contact.html#traffic_info">聯絡表單</a></li>
+                    </ul>
+                </li>
             </ul>
 
             <!-- ICON -->
@@ -202,6 +245,12 @@
                         <li><a href="custom.html#custom_full">全客製化</a></li>
                         <li><a href="custom.html#custom_half">半客製化</a></li>
                     </ul>
+                    <ul class="footer_cases">
+                        <li class="footer_li_item"><a href="cases.html">客戶案例</a></li>
+                        <li><a href="cases.html#case_gift">贈禮類別</a></li>
+                        <li><a href="cases.html#case_wed">婚禮類別</a></li>
+                        <li><a href="cases.html#case_in">居家類別</a></li>
+                    </ul>
                     <ul class="footer_faq">
                         <li class="footer_li_item"><a href="faq.html">常見問題</a></li>
                         <li><a href="faq.html#faq_q1">何為永生花</a></li>
@@ -209,12 +258,6 @@
                         <li><a href="faq.html#faq_q3">運費價格</a></li>
                         <li><a href="faq.html#faq_q4">售後服務</a></li>
                         <li><a href="faq.html#faq_q5">後續保養</a></li>
-                    </ul>
-                    <ul class="footer_cases">
-                        <li class="footer_li_item"><a href="cases.html">客戶案例</a></li>
-                        <li><a href="cases.html#case_gift">贈禮類別</a></li>
-                        <li><a href="cases.html#case_wed">婚禮類別</a></li>
-                        <li><a href="cases.html#case_in">居家類別</a></li>
                     </ul>
                     <ul class="footer_contact">
                         <li class="footer_li_item"><a href="contact.html">聯絡我們</a></li>
@@ -243,22 +286,20 @@
                         <li><a href="custom.html#custom_full">全客製化</a></li>
                         <li><a href="custom.html#custom_half">半客製化</a></li>
                     </ul>
-
-                    <button class="accordion">常見問題</button>
-                    <ul class="footer_panel custom">
-                        <li><a href="faq.html#faq_q1">何為永生花</a></li>
-                        <li><a href="faq.html#faq_q2">運送包裝</a></li>
-                        <li><a href="faq.html#faq_q3">運費服務</a></li>
-                        <li><a href="faq.html#faq_q4">售後服務</a></li>
-                        <li><a href="faq.html#faq_q5">後續保養</a></li>
-                    </ul>
-
                     <button class="accordion">客戶案例</button>
-                    <ul class="footer_panel custom">
-                        <li><a href="cases.html#case_gift">贈禮類別</a></li>
-                        <li><a href="cases.html#case_wed">婚禮類別</a></li>
-                        <li><a href="cases.html#case_in">居家類別</a></li>
-                    </ul>
+                        <ul class="footer_panel custom">
+                            <li><a href="cases.html#case_gift">贈禮類別</a></li>
+                            <li><a href="cases.html#case_wed">婚禮類別</a></li>
+                            <li><a href="cases.html#case_in">居家類別</a></li>
+                        </ul>
+                        <button class="accordion">常見問題</button>
+                        <ul class="footer_panel custom">
+                            <li><a href="faq.html#faq_q1">何為永生花</a></li>
+                            <li><a href="faq.html#faq_q2">運送包裝</a></li>
+                            <li><a href="faq.html#faq_q3">運費服務</a></li>
+                            <li><a href="faq.html#faq_q4">售後服務</a></li>
+                            <li><a href="faq.html#faq_q5">後續保養</a></li>
+                        </ul>
                     <button class="accordion">聯絡我們</button>
                     <ul class="footer_panel about">
                         <li><a href="contact.html#traffic_info">店鋪資訊</a></li>

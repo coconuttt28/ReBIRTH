@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex,nofollow" />
     <title>《Re:BIRTH》永生花藝</title>
-    <meta property="og:description" content="無論是贈禮花束、婚禮花束還是居家花藝擺設，《Re:BIRTH》永生花藝都將為您精心打造專屬於您的永生花束。我們有最專業的團隊為您服務，是您選擇永生花束的最佳選擇。">
+    <meta property="og:description"
+        content="無論是贈禮花束、婚禮花束還是居家花藝擺設，《Re:BIRTH》永生花藝都將為您精心打造專屬於您的永生花束。我們有最專業的團隊為您服務，是您選擇永生花束的最佳選擇。">
     <meta property="og:image" content="favicon.ico">
     <!-- 熱門商品左右切換 -->
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.css'>
@@ -31,12 +32,55 @@
 
             <!-- 普通列表 -->
             <ul class="header_menu">
-                <li><a href="about.html">About</a></li>
-                <li><a href="shop.html">Shop</a></li>
-                <li><a href="custom.html">Custom</a></li>
-                <li><a href="cases.html">Cases</a></li>
-                <li><a href="faq.html">F&Q</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li>
+                    <a href="about.html" class="special-link">About</a>
+                    <ul class="dropdown_menu">
+                        <li><a href="about.html">關於我們</a></li>
+                        <li><a href="about.html#team">花藝師團隊</a></li>
+                        <li><a href="about.html#flowerMean">花語介紹</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="shop.html" class="special-link">Shop</a>
+                    <ul class="dropdown_menu">
+                        <li><a href="shop.html#onlineShop">婚禮花束</a></li>
+                        <li><a href="shop.html#onlineShop">贈禮花束</a></li>
+                        <li><a href="shop.html#onlineShop">居家裝飾</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="custom.html" class="special-link">Custom</a>
+                    <ul class="dropdown_menu">
+                        <li><a href="custom.html#steps">代客送花</a></li>
+                        <li><a href="custom.html#custom_full">全客製化</a></li>
+                        <li><a href="custom.html#custom_half">半客製化</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="cases.html" class="special-link">Cases</a>
+                    <ul class="dropdown_menu">
+                        <li><a href="cases.html#case_gift">贈禮類別</a></li>
+                        <li><a href="cases.html#case_wed">婚禮類別</a></li>
+                        <li><a href="cases.html#case_in">居家類別</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="faq.html" class="special-link">F&Q</a>
+                    <ul class="dropdown_menu">
+                        <li><a href="faq.html#faq_q1">何為永生花</a></li>
+                        <li><a href="faq.html#faq_q2">運送包裝</a></li>
+                        <li><a href="faq.html#faq_q3">運費價格</a></li>
+                        <li><a href="faq.html#faq_q4">售後服務</a></li>
+                        <li><a href="faq.html#faq_q5">後續保養</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="contact.html" class="special-link">Contact</a>
+                    <ul class="dropdown_menu">
+                        <li><a href="contact.html#traffic_info">店鋪資訊</a></li>
+                        <li><a href="contact.html#traffic_info">聯絡表單</a></li>
+                    </ul>
+                </li>
             </ul>
 
             <!-- ICON -->
@@ -76,6 +120,11 @@
                 <!-- RWD列表 -->
                 <div id="myNav" class="overlay">
                     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <div class="overlay-logo">
+                        <a href="index.html">
+                            <img src="./image/icon.svg" alt="《Re：BIRTH》永生花藝">
+                        </a>
+                    </div>
                     <div class="overlay-content">
                         <a href="about.html">About</a>
                         <a href="shop.html">Shop</a>
@@ -270,6 +319,8 @@
         </div>
         <!-- 熱門商品 -->
         <section id="bestSeller">
+            <div class="bestseller_bg_left"></div>
+            <div class="bestseller_bg_right"></div>
             <div class="title_bestSeller">
                 <h2>
                     <span class="en_title">Best Seller<span class="ch_title"> / 熱門商品</span>
@@ -740,6 +791,12 @@
                             <li><a href="custom.html#custom_full">全客製化</a></li>
                             <li><a href="custom.html#custom_half">半客製化</a></li>
                         </ul>
+                        <ul class="footer_cases">
+                            <li class="footer_li_item"><a href="cases.html">客戶案例</a></li>
+                            <li><a href="cases.html#case_gift">贈禮類別</a></li>
+                            <li><a href="cases.html#case_wed">婚禮類別</a></li>
+                            <li><a href="cases.html#case_in">居家類別</a></li>
+                        </ul>
                         <ul class="footer_faq">
                             <li class="footer_li_item"><a href="faq.html">常見問題</a></li>
                             <li><a href="faq.html#faq_q1">何為永生花</a></li>
@@ -747,12 +804,6 @@
                             <li><a href="faq.html#faq_q3">運費價格</a></li>
                             <li><a href="faq.html#faq_q4">售後服務</a></li>
                             <li><a href="faq.html#faq_q5">後續保養</a></li>
-                        </ul>
-                        <ul class="footer_cases">
-                            <li class="footer_li_item"><a href="cases.html">客戶案例</a></li>
-                            <li><a href="cases.html#case_gift">贈禮類別</a></li>
-                            <li><a href="cases.html#case_wed">婚禮類別</a></li>
-                            <li><a href="cases.html#case_in">居家類別</a></li>
                         </ul>
                         <ul class="footer_contact">
                             <li class="footer_li_item"><a href="contact.html">聯絡我們</a></li>
@@ -767,21 +818,24 @@
                             <li><a href="about.html#team">花藝團隊</a></li>
                             <li><a href="about.html#flowerMean">花語介紹</a></li>
                         </ul>
-
                         <button class="accordion">線上商店</button>
                         <ul class="footer_panel shop">
                             <li><a href="shop.html#onlineShop">婚禮花束</a></li>
                             <li><a href="shop.html#onlineShop">贈禮花束</a></li>
                             <li><a href="shop.html#onlineShop">居家裝飾</a></li>
                         </ul>
-
-                        <button class="accordion">客製服務</button>
+                        <button class="accordion">客製專區</button>
                         <ul class="footer_panel custom">
                             <li><a href="custom.html#steps">代客送花</a></li>
                             <li><a href="custom.html#custom_full">全客製化</a></li>
                             <li><a href="custom.html#custom_half">半客製化</a></li>
                         </ul>
-
+                        <button class="accordion">客戶案例</button>
+                        <ul class="footer_panel custom">
+                            <li><a href="cases.html#case_gift">贈禮類別</a></li>
+                            <li><a href="cases.html#case_wed">婚禮類別</a></li>
+                            <li><a href="cases.html#case_in">居家類別</a></li>
+                        </ul>
                         <button class="accordion">常見問題</button>
                         <ul class="footer_panel custom">
                             <li><a href="faq.html#faq_q1">何為永生花</a></li>
@@ -789,13 +843,6 @@
                             <li><a href="faq.html#faq_q3">運費服務</a></li>
                             <li><a href="faq.html#faq_q4">售後服務</a></li>
                             <li><a href="faq.html#faq_q5">後續保養</a></li>
-                        </ul>
-
-                        <button class="accordion">客戶案例</button>
-                        <ul class="footer_panel custom">
-                            <li><a href="cases.html#case_gift">贈禮類別</a></li>
-                            <li><a href="cases.html#case_wed">婚禮類別</a></li>
-                            <li><a href="cases.html#case_in">居家類別</a></li>
                         </ul>
                         <button class="accordion">聯絡我們</button>
                         <ul class="footer_panel about">
@@ -822,12 +869,12 @@
                     </div>
                 </div>
             </div>
-                <div class="footer_copyright">
-                    © 2020 - 2023 Re:BIRTH. All Rights Reserved.<br>
-                    <br>
-                    網頁設計：葉宜璇。<br>
-                    網頁製作：葉宜璇（Index、About、F&Q、Contact、Topbar、Footer）、周愷琪（Shop、Custom、Cases、Login、商品頁）。
-                </div>
+            <div class="footer_copyright">
+                © 2020 - 2023 Re:BIRTH. All Rights Reserved.<br>
+                <br>
+                網頁設計：葉宜璇。<br>
+                網頁製作：葉宜璇（Index、About、F&Q、Contact、Topbar、Footer）、周愷琪（Shop、Custom、Cases、Login、商品頁）。
+            </div>
             <!-- </div> -->
             <button type="button" class="btn btn-gotop d-inline-flex align-items-center justify-content-center"
                 data-action="gotop">
@@ -847,4 +894,5 @@
     integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
     crossorigin="anonymous"></script>
 <script src="./js/script.js"></script>
+
 </html>

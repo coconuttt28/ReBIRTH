@@ -118,6 +118,7 @@ section {
 .form input,
 .form button,
 .login-form p,
+.dropdown_menu a,
 .offcanvas-title,
 .offcanvas-body,
 .cartbtn.btn-secondary,
@@ -173,7 +174,7 @@ html {
     left: 0;
     min-height: 10%;
     width: 100%;
-    padding: 10px 2vw;
+    padding: 0px 2vw;
     z-index: 999;
     display: flex;
     align-items: center;
@@ -188,6 +189,7 @@ html {
 
 .header li {
     display: flex;
+    justify-content: center;
 }
 
 .logo {
@@ -203,11 +205,12 @@ html {
     display: none;
 }
 
-#topbar ul {
+.header_icon {
     display: flex;
 }
 
 .header_menu {
+    display: flex;
     flex: 1;
     justify-content: center;
     letter-spacing: 5px;
@@ -215,32 +218,81 @@ html {
 }
 
 .header_menu li {
-    padding: 0px 20px;
     list-style-type: none;
+    width: 135px;
 }
 
 .header_menu a {
     color: #FFFCF5;
     text-decoration: none;
     font-size: 18px;
+    padding: 40px 20px;
+    position: relative;
 }
 
-
-.header_menu a::after {
-    content: "";
+.special-link:hover::before {
+    content: '';
+    width: 6px;
+    height: 6px;
     display: block;
-    position: relative;
-    margin: auto;
-    top: 10px;
-    width: 0;
-    height: 1.5px;
     background-color: #FFFCF5;
-    transform-origin: center center;
-    transition: all .3s;
+    border-radius: 8px;
+    position: absolute;
+    left: 0;
+    top: 45px;
+    opacity: 1;
+}
+
+.dropdown_menu a:hover::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    display: block;
+    background-color: #445251;
+    border-radius: 8px;
+    position: absolute;
+    left: 0;
+    top: 22px;
+    opacity: 1; 
 }
 
 .header_menu a:hover::after {
     width: 2rem;
+}
+
+/* 觸發下拉選單 */
+#topbar ul li:hover>ul {
+    display: block;
+}
+
+/* 小選單 */
+.dropdown_menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    background: #FFFCF5;
+    padding: 0;
+}
+
+/* 小選單寬度 */
+.dropdown_menu li {
+    float: none;
+    border-style:solid;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.2);
+}
+
+/* 小選單文字 */
+.dropdown_menu a {
+    letter-spacing: 3px;
+    line-height: 1.5;
+    padding: 15px 20px;
+    color: #445251;
+    font-size: 14px;
+}
+
+.dropdown_menu li:hover{
+    background-color: #D6D8CA;
+    transition: all .3s;
 }
 
 .header_icon {
