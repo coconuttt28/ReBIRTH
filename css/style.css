@@ -291,7 +291,7 @@ html {
     position: absolute;
     left: 0;
     top: 22px;
-    opacity: 1; 
+    opacity: 1;
 }
 
 .header_menu a:hover::after {
@@ -315,7 +315,7 @@ html {
 /* 小選單寬度 */
 .dropdown_menu li {
     float: none;
-    border-style:solid;
+    border-style: solid;
     box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.2);
 }
 
@@ -328,7 +328,7 @@ html {
     font-size: 14px;
 }
 
-.dropdown_menu li:hover{
+.dropdown_menu li:hover {
     background-color: #D6D8CA;
     transition: all .3s;
 }
@@ -1273,16 +1273,16 @@ section {
     width: 1px;
     height: 30px;
     background-color: #445251;
+    pointer-events: none;
+    top: 0;
 }
 
 .bestSeller_tablinks.gift::before {
-    right: 33%;
-    bottom: 0px;
+    left: 33%;
 }
 
 .bestSeller_tablinks.gift::after {
-    right: 67%;
-    bottom: 0px;
+    left: 66.7%;
 }
 
 .list_box_bestseller {

@@ -3,6 +3,25 @@ Swal.fire({
     icon: "info"
   });
 
+// 宣告麵包屑
+const breadcrumb = document.querySelector('.breadcrumb-item a');
+// 宣告上方類別按鈕
+const weddingButton = document.querySelector('.icon-wedding');
+const giftButton = document.querySelector('.icon-gift');
+const indoorButton = document.querySelector('.icon-indoor');
+weddingButton.addEventListener('click', function() {
+    breadcrumb.innerText = '全部商品 / 婚禮花束';
+});
+
+giftButton.addEventListener('click', function() {
+    breadcrumb.innerText = '全部商品 / 送禮花束';
+});
+
+indoorButton.addEventListener('click', function() {
+    breadcrumb.innerText = '全部商品 / 居家裝飾';
+});
+
+
 const onlineShop = document.getElementById('onlineShop')
 const links = onlineShop.querySelectorAll('a')
 const products = document.querySelectorAll('.products')
@@ -236,7 +255,7 @@ const productList = [
         "amount": "1299",
         "img": "./images/FL22.jpg",
         "name": "Garden of Dreams",
-        "title": "- 夢幻花園-",
+        "title": "-夢幻花園-",
         "price": "NT$ 1,299"
     },
     {
@@ -339,7 +358,7 @@ const searchButton = document.getElementById('searchButton')
 searchButton.addEventListener('click', () => {
     let color;
     let flower;
-
+    let breadcrumbText = '全部商品 / ';
 
     const selectedColor = document.querySelector('input[name="color"]:checked');
     const selectedFlower = document.querySelector('input[name="flower"]:checked');
@@ -347,13 +366,18 @@ searchButton.addEventListener('click', () => {
     if (selectedColor) {
         color = selectedColor.value;
         console.log('已選取的顏色：', color);
+        breadcrumbText += getColorText(color); // 取得中文顏色名稱
     }
 
     if (selectedFlower) {
         flower = selectedFlower.value;
         console.log('已選取的花種：', flower);
+        breadcrumbText += getFlowerText(flower); // 取得中文花種名稱
     }
 
+    // 更新麵包屑文字
+    breadcrumb.innerText = breadcrumbText;
+    // 篩選
     filterList = productList.filter((product) => {
         if (color && flower) {
             return product.color === color && product.type === flower;
@@ -370,6 +394,36 @@ searchButton.addEventListener('click', () => {
 
     console.log('篩選結果', filterList);
 })
+
+// 取得中文顏色名稱
+function getColorText(color) {
+    switch (color) {
+        case 'white':
+            return '白色';
+        case 'red':
+            return '紅色';
+        case 'yellow':
+            return '黃色';
+        case 'orange':
+            return '橘色';
+        default:
+            return '';
+    }
+}
+
+// 取得中文花種名稱
+function getFlowerText(flower) {
+    switch (flower) {
+        case 'rose':
+            return '玫瑰';
+        case 'daisy':
+            return '雛菊';
+        case 'cotton':
+            return '棉花';
+        default:
+            return '';
+    }
+}
 
 
 
@@ -412,8 +466,19 @@ lowerSlider.oninput = function () {
     filterProductsByAmount()
 }
 //end滑動
-
+ 
 //分類
+function changeBackground(imageName, button) {
+    // 將所有按鈕的背景圖片先恢復為原始狀態
+    const allButtons = document.querySelectorAll('.icon-wedding, .icon-gift, .icon-indoor');
+    allButtons.forEach(btn => {
+        btn.style.backgroundImage = `url(/ReBIRTH-main/images/${btn.dataset.originalBg})`;
+    });
+
+    // 改變點擊的按鈕的背景圖片
+    button.style.backgroundImage = `url(/ReBIRTH-main/images/${imageName})`;
+    }
+
 function filterProductsByAmount() {
     const minAmount = document.getElementById('lower').value
     const maxAmount = document.getElementById('upper').value
@@ -435,6 +500,7 @@ function filterProductsByAmount() {
             product.style.display = 'block'
         } else {
             product.style.display = 'none'
+
         }
     })
 }
