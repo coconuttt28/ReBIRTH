@@ -472,11 +472,11 @@ function changeBackground(imageName, button) {
     // 將所有按鈕的背景圖片先恢復為原始狀態
     const allButtons = document.querySelectorAll('.icon-wedding, .icon-gift, .icon-indoor');
     allButtons.forEach(btn => {
-        btn.style.backgroundImage = `url(/ReBIRTH-main/images/${btn.dataset.originalBg})`;
+        btn.style.backgroundImage = `url(../images/${btn.dataset.originalBg})`;
     });
 
     // 改變點擊的按鈕的背景圖片
-    button.style.backgroundImage = `url(/ReBIRTH-main/images/${imageName})`;
+    button.style.backgroundImage = `url(../images/${imageName})`;
     }
 
 function filterProductsByAmount() {
