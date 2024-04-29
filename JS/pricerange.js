@@ -468,16 +468,44 @@ lowerSlider.oninput = function () {
 //end滑動
  
 //分類
-function changeBackground(imageName, button) {
-    // 將所有按鈕的背景圖片先恢復為原始狀態
-    const allButtons = document.querySelectorAll('.icon-wedding, .icon-gift, .icon-indoor');
-    allButtons.forEach(btn => {
-        btn.style.backgroundImage = `url(../images/${btn.dataset.originalBg})`;
-    });
+// 定義改變背景圖片的函式
+const changeBackground = (btn, imageUrl) => {
+    btn.style.backgroundImage = `url(${imageUrl})`;
+};
 
-    // 改變點擊的按鈕的背景圖片
-    button.style.backgroundImage = `url(../images/${imageName})`;
-    }
+// 定義還原背景圖片的函式
+const restoreBackground = (btn) => {
+    btn.style.backgroundImage = ''; // 清除背景圖片
+};
+
+// 獲取所有按鈕
+const buttons = document.querySelectorAll('.btn-background');
+
+// 每個按鈕添加點擊事件監聽器
+buttons.forEach(button => {
+    button.addEventListener('click', function() {
+        // 將所有按鈕的背景圖片還原
+        buttons.forEach(btn => restoreBackground(btn));
+
+        // 獲取按鈕的 data-category 屬性值
+        const category = this.dataset.category;
+        // 根據不同的類別設定不同的背景圖片
+        switch (category) {
+            case 'wedding':
+                changeBackground(this, 'images/btn-wed_active.svg');
+                break;
+            case 'gift':
+                changeBackground(this, 'images/btn-gift_active.svg');
+                break;
+            case 'indoor':
+                changeBackground(this, 'images/btn-in_active.svg');
+                break;
+            default:
+                break;
+        }
+    });
+});
+
 
 function filterProductsByAmount() {
     const minAmount = document.getElementById('lower').value
