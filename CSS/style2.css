@@ -848,38 +848,16 @@ h2 {
 }
 
 .products h3,
+.products h4,
 .products p {
-  font-family: 'Italiana', serif;
-  font-size: 24px;
-  text-align: center;
-  padding: 1px;
-  margin: 0.5px;
-}
-
-@media (max-width:768px) {
-
-  .products h3,
-  .products p {
-    font-size: 20px;
-  }
-
-}
-
-.products h4 {
   font-family: 'Noto Serif TC', serif;
-  font-size: 18px;
+  font-size: 16px;
   text-align: center;
-  padding: 1px;
-  margin: 0.2px;
-
+  letter-spacing: 0.5px;
+  line-height: 1.5;
 }
 
-@media (max-width:768px) {
-  .products h4 {
-    font-size: 14px;
-  }
 
-}
 .icon-wedding {
   background-image: url(../images/btn-wed.svg);
 }

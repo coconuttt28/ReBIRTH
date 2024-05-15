@@ -1,34 +1,7 @@
 .pagination{
-    font-family: 'Italiana', serif;
-    color: #000;
+    font-family: 'Noto Serif TC', serif;
     list-style-type: none;
   }
-  
-  /* a{
-    text-decoration: none;
-  } */
-  
-  /* p, li, a{
-    font-size: 20px;
-  } */
-  
-  /* GRID */
-  
-/*   
-  .two { width: 15.33%; }
-  .one { width: 6.866%; } */
-  
-  /* COLUMNS */
-  
-  /* .col {
-      display: block;
-      float:left;
-      margin: 1% 0 1% 1.6%;
-  }
-  
-  .col:first-of-type {
-    margin-left: 0;
-  } */
   
   .container{
     width: 100%;
@@ -40,16 +13,6 @@
   }
   
   /* GENERAL STYLES */
-  
-  /* .pagination{
-    padding: 30px 0;
-  } */
-  
-  /* .pagination ul{
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-  } */
 
   #container_both {
     width: 100%;
@@ -64,27 +27,20 @@
   
   .pagination a{
     text-decoration: none;
-    /* display: inline-block; */
-    padding: 10px 18px;
+    padding: 10px 15px;
     color: #000;
+    font-size: 14px;
   }
   
   .shop_breadcrumb a{
     text-decoration: none;
     padding: 10px 0px;
-    color: #000;
     letter-spacing: 0.5px;
     line-height: 1.5;
     display: inline-block;
     font-family: 'Noto Serif TC', serif;
     font-size: 14px;
+    color: #000;
   }
-  
-  /* TWO */
-  
-  /* .p2 .is-active li{
-    font-weight: bold;
-    border-bottom: 3px solid #000;
-  }
-   */
+
   
