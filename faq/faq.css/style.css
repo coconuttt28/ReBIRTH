@@ -508,10 +508,6 @@ span {
         display: block;
     }
 
-    .header_icon {
-        display: block;
-    }
-
     .list_item a {
         display: flex;
         width: 32px;
