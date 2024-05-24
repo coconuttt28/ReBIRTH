@@ -541,8 +541,8 @@ function renderProductList(items) {
             <figure>
               <a href="products.html"><img src="${item.img}" alt=""/></a>
             </figure>
-            <h3>${item.name}</h3>
-            <h4>${item.title}</h4>
+            <p>${item.name}</p>
+            <p>${item.title}</p>
             <p>${item.price}</p>
           </article>
         `;

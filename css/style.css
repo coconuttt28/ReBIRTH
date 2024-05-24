@@ -669,7 +669,6 @@ span {
 
 /* 頁面共用區 */
 main>* {
-    /* 每行高度相隔100vh,vh是視窗高度 */
     height: calc(90vh - 10%);
 }
 
@@ -679,23 +678,17 @@ main>* {
 
 section {
     display: flex;
-    /* 以下可以去玩青蛙遊戲練習 */
     flex-direction: column;
-    /* 設定主軸為垂直 */
     justify-content: space-around;
-    /* 設定主軸垂直置中(固定在中央) */
     align-items: center;
-    /* 設定副軸水平置中(置中) */
     height: 100%;
 }
 
 
 .title {
     font-family: 'Italiana', serif;
-    /* 裝飾用字不在字級限制範圍內 */
     font-size: 3rem;
     padding-top: 20px;
-    /* 每頁上面的分隔線 */
     border-top: 3px solid #666;
 }
 
@@ -1288,7 +1281,6 @@ section {
 .list_box_bestseller {
     padding-bottom: 2vh;
     position: relative;
-    /* width: 90%; */
 }
 
 .bestseller_tabcontent {
@@ -1310,6 +1302,7 @@ section {
 .bestseller_img {
     width: 100%;
     overflow: hidden;
+    border-radius: 4px;
 }
 
 .bestseller_tabcontent img {
