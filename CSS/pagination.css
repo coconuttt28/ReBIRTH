@@ -11,6 +11,27 @@
     position: relative;
     text-align: right;
   }
+
+  @media (max-width: 1697px) {
+    .container {
+      width: 60%;
+    }
+  }
+
+  @media (max-width: 992px) {
+    .container {
+      max-width: 450px;
+      width: 450px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .filter-price {
+      width: 300px;
+    }
+
+
+  }
   
   /* GENERAL STYLES */
 
@@ -22,7 +43,16 @@
   }
 
   ol.breadcrumb {
-    margin-bottom: 0px;
+    margin:0 5px;
+
+  }
+
+  .btn-primary a{
+    background-image: url(../images/interface-ui-controls-sliders_svgrepo.com.svg);
+  }
+
+  .shop_breadcrumb{
+    display: flex;
   }
   
   .pagination a{
@@ -32,7 +62,7 @@
     font-size: 14px;
   }
   
-  .shop_breadcrumb a{
+  .breadcrumb-item a{
     text-decoration: none;
     padding: 10px 0px;
     letter-spacing: 0.5px;

@@ -84,6 +84,8 @@
           </ul>
         </li>
       </ul>
+
+      <!-- ICON -->
       <div class="rwd_right">
         <ul class="header_icon">
           <li class="list_item">
@@ -118,18 +120,23 @@
         <!-- RWD列表 -->
         <div id="myNav" class="overlay">
           <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-          <div class="overlay-content">
-            <a href="about.html">About</a>
-            <a href="shop.html">Shop</a>
-            <a href="custom.html">Custom</a>
-            <a href="cases.html">Cases</a>
-            <a href="faq.html">F&Q</a>
-            <a href="contact.html">Contact</a>
+          <div class="overlay-logo">
+              <a href="index.html">
+                  <img src="./image/icon.svg" alt="《Re：BIRTH》永生花藝">
+              </a>
           </div>
-        </div>
-        <span class="openbtn" onclick="openNav()"></span>
+          <div class="overlay-content">
+              <a href="about.html">About</a>
+              <a href="shop.html">Shop</a>
+              <a href="custom.html">Custom</a>
+              <a href="cases.html">Cases</a>
+              <a href="faq.html">F&Q</a>
+              <a href="contact.html">Contact</a>
+          </div>
       </div>
-    </nav>
+      <span class="openbtn" onclick="openNav()"></span>
+  </div>
+</nav>
     <!-- 登入 -->
     <div id="window-container" style="display: none;">
       <div class="window-content">
@@ -197,12 +204,12 @@
       <div class="price-wrap">
         <div class="price-wrap-1">
           <label for="one">$NT</label>
-          <input id="one">
+          <div id="one"></div>
         </div>
         <div class="price-wrap_line">-</div>
         <div class="price-wrap-2">
           <label for="two">$NT</label>
-          <input id="two">
+          <div id="two"></div>
         </div>
       </div>
     </fieldset>
@@ -210,10 +217,53 @@
 
   <!-- 頁碼 -->
   <div class="container">
-
+    <!-- 篩選 -->
     <div id="container_both">
-      <!-- 麵包屑 -->
+      <!-- 麵包屑+篩選 -->
       <div class="shop_breadcrumb">
+        <!-- BS -->
+        <button class="btn-custom" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasLeft" aria-controls="offcanvasLeft">
+          篩選
+          <span class="icon-filter"></span>
+          
+        </button>
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasLeft" aria-labelledby="offcanvasLeftLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasLeftLabel">篩選</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div id="search" class="offcanvas-body">
+              <!-- <li><input type="text" name="search" class="search_bar" placeholder="Search..." /></li> -->
+              <ul>
+        
+                <li class="search_tittle">價格排序</li>
+                <li>
+                  <a href="javascript:void(0);" class="high-to-low">價格高至低</a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);" class="low-to-high">價格低至高</a>
+                </li>
+              </ul>
+              <ul class="search_color">
+                <li class="search_tittle">花種顏色：</li>
+                <li><label><input type="radio" name="color" class="" value="white" />白色</li></label>
+                <li><label><input type="radio" name="color" class="" value="red" />紅色</li></label>
+                <li><label><input type="radio" name="color" class="" value="yellow" />黃色</li></label>
+                <li><label><input type="radio" name="color" class="" value="orange" />橘色</li></label>
+              </ul>
+              <ul>
+                <li class="search_tittle">花種選擇：</li>
+                <li><label><input type="radio" name="flower" class="" value="rose" />玫瑰</li></label>
+                <li><label><input type="radio" name="flower" class="" value="daisy" />雛菊</li></label>
+                <li><label><input type="radio" name="flower" class="" value="cotton" />棉花</li></label>
+              </ul>
+              <div class="search_item_btn">
+                <button class="cartbtn btn-secondary" id="searchButton">搜尋</button>
+              </div>
+
+          </div>
+        </div>
+        <!-- 麵包屑 -->
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb">
             <li class="breadcrumb-item active" aria-current="page"><a href="./shop.html">全部商品</a></li>
@@ -221,6 +271,7 @@
         </nav>
       </div>
 
+      <!-- 頁碼 -->
       <div class="pagination p2">
         <ul class="d-flex justify-content-center w-100">
           <!-- 動態載入 -->
@@ -232,36 +283,6 @@
     <!-- 商品區 -->
     <div id="products">
       <!-- 動態載入 -->
-    </div>
-
-    <div class="search">
-      <li><input type="text" name="search" class="search_bar" placeholder="Search..." /></li>
-      <ul>
-
-        <li class="search_tittle">價格排序</li>
-        <li>
-          <a href="javascript:void(0);" class="high-to-low">價格高至低</a>
-        </li>
-        <li>
-          <a href="javascript:void(0);" class="low-to-high">價格低至高</a>
-        </li>
-      </ul>
-      <ul class="search_color">
-        <li class="search_tittle">花種顏色：</li>
-        <li><label><input type="radio" name="color" class="" value="white" />白色</li></label>
-        <li><label><input type="radio" name="color" class="" value="red" />紅色</li></label>
-        <li><label><input type="radio" name="color" class="" value="yellow" />黃色</li></label>
-        <li><label><input type="radio" name="color" class="" value="orange" />橘色</li></label>
-      </ul>
-      <ul>
-        <li class="search_tittle">花種選擇：</li>
-        <li><label><input type="radio" name="flower" class="" value="rose" />玫瑰</li></label>
-        <li><label><input type="radio" name="flower" class="" value="daisy" />雛菊</li></label>
-        <li><label><input type="radio" name="flower" class="" value="cotton" />棉花</li></label>
-      </ul>
-      <div class="search_item_btn">
-        <button class="search_button" id="searchButton">搜尋</button>
-      </div>
     </div>
   </div>
 
@@ -383,12 +404,8 @@
       </div>
     </div>
     <div class="footer_copyright">
-      © 2020 - 2023 Re:BIRTH. All Rights Reserved.<br>
-      <br>
-      網頁設計：葉宜璇。<br>
-      網頁製作：葉宜璇（Index、About、F&Q、Contact、Topbar、Footer）、周愷琪（Shop、Custom、Cases、Login、商品頁）。
+      © 2020 - 2023 Re:BIRTH. All Rights Reserved.
     </div>
-    <!-- </div> -->
     <button type="button" class="btn btn-gotop d-inline-flex align-items-center justify-content-center"
       data-action="gotop">
     </button>

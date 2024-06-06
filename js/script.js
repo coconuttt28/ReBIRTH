@@ -13,6 +13,16 @@ function openNav() {
 function closeNav() {
     document.getElementById("myNav").style.height = "0%";
 }
+    // 在控制台中檢查綁定和元素
+    console.log(document.querySelector(".openbtn"));
+    console.log(document.querySelector(".openbtn").onclick);
+    console.log(document.getElementById("myNav"));
+
+    // 手動調用函數
+    openNav();
+    closeNav();
+
+
 // footer_list rwd
 var acc = document.getElementsByClassName("accordion");
 var i;

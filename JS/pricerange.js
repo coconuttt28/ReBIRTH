@@ -552,7 +552,6 @@ function renderProductList(items) {
   document.querySelector("#products").innerHTML = productDom.join("");
 }
 
-
 // 麵包屑文字
 const breadcrumb = document.querySelector(".breadcrumb-item a");
 const weddingButton = document.querySelector(".icon-wedding");
@@ -585,9 +584,11 @@ links.forEach((link) => {
 
     // 類別篩選
     filterList = allProducts.filter((product) => {
-      return product.category === selectedCategory &&
+      return (
+        product.category === selectedCategory &&
         (!selectedCategoryType || product.type === selectedCategoryType) &&
-        (!selectedCategoryColor || product.color === selectedCategoryColor);
+        (!selectedCategoryColor || product.color === selectedCategoryColor)
+      );
     });
 
     isFilter = true;
@@ -623,18 +624,19 @@ searchButton.addEventListener("click", () => {
 
   // 篩選
   filterList = allProducts.filter((product) => {
-    
-    return (!color || product.color === color) && (!flower || product.type === flower) &&
+    return (
+      (!color || product.color === color) &&
+      (!flower || product.type === flower) &&
       (!selectedCategory || product.category === selectedCategory) &&
       (!selectedCategoryType || product.type === selectedCategoryType) &&
-      (!selectedCategoryColor || product.color === selectedCategoryColor);
+      (!selectedCategoryColor || product.color === selectedCategoryColor)
+    );
   });
 
   isFilter = true;
   displayItems(1);
   calculateTotalPages(filterList);
 });
-
 
 // 取得中文顏色名稱
 function getColorText(color) {
@@ -665,6 +667,12 @@ function getFlowerText(flower) {
       return "";
   }
 }
+// 篩選後收起側欄
+document.getElementById("searchButton").addEventListener("click", function () {
+  const offcanvasElement = document.getElementById("offcanvasLeft");
+  const offcanvasInstance = bootstrap.Offcanvas.getInstance(offcanvasElement);
+  offcanvasInstance.hide();
+});
 
 // 分類按鈕點擊樣式
 // 定義改變背景圖片的函式
@@ -706,25 +714,25 @@ buttons.forEach((button) => {
 // 滑動
 const lowerSlider = document.getElementById("lower");
 const upperSlider = document.getElementById("upper");
-const inputOne = document.getElementById("one");
-const inputTwo = document.getElementById("two");
+const divOne = document.getElementById("one");
+const divTwo = document.getElementById("two");
 
 function formatNumber(number) {
   return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
-function updateInputValue(inputId, value) {
-  const input = document.getElementById(inputId);
-  input.value = formatNumber(value);
+function updateDivValue(divId, value) {
+  const div = document.getElementById(divId);
+  div.textContent = formatNumber(value);
 }
 
-function updateInputValues() {
-  updateInputValue("one", lowerSlider.value);
-  updateInputValue("two", upperSlider.value);
+function updateDivValues() {
+  updateDivValue("one", lowerSlider.value);
+  updateDivValue("two", upperSlider.value);
 }
 
 // 初始設定數字顯示
-updateInputValues();
+updateDivValues();
 
 // 滑桿變化事件監聽
 lowerSlider.addEventListener("input", handleSliderChange);
@@ -743,19 +751,29 @@ function applyPriceFilter() {
   if (isFilter && useSliderFilter) {
     filteredProducts = allProducts.filter((product) => {
       const amount = parseInt(product.amount);
-    
-        // 確認商品符合選擇的類別、顏色和花種
-        const isCategoryMatch = selectedCategory === null || product.category === selectedCategory;
-        const isTypeMatch = selectedCategoryType === null || product.type === selectedCategoryType;
-        const isColorMatch = selectedCategoryColor === null || product.color === selectedCategoryColor;
-        
-        return isCategoryMatch && isTypeMatch && isColorMatch && amount >= minAmount && amount <= maxAmount;
-      });
+
+      // 確認商品符合選擇的類別、顏色和花種
+      const isCategoryMatch =
+        selectedCategory === null || product.category === selectedCategory;
+      const isTypeMatch =
+        selectedCategoryType === null || product.type === selectedCategoryType;
+      const isColorMatch =
+        selectedCategoryColor === null ||
+        product.color === selectedCategoryColor;
+
+      return (
+        isCategoryMatch &&
+        isTypeMatch &&
+        isColorMatch &&
+        amount >= minAmount &&
+        amount <= maxAmount
+      );
+    });
   } else {
     // 直接對全部商品進行價格篩選
     filteredProducts = allProducts.filter((product) => {
       const amount = parseInt(product.amount);
-      isFilter = true ;
+      isFilter = true;
       return amount >= minAmount && amount <= maxAmount;
     });
   }
@@ -774,6 +792,7 @@ function handleSliderChange() {
 
   // 篩選商品
   applyPriceFilter();
+  updateDivValues();
 }
 
 // 價格高低排序

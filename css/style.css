@@ -119,8 +119,6 @@ section {
 .en_title,
 .carousel-item__subtitle,
 .en_content,
-.en_prod_name,
-.en_prod_money,
 .view_all a,
 .btn_giftIdeas,
 .giftIdeas_h2,
@@ -149,7 +147,7 @@ section {
 .bestSeller_tab,
 .ch_content_title,
 .ch_content_description,
-.ch_prod_name .bestSeller_tab a,
+.bestseller_content p,
 .giftIdeas_p,
 .list_box_process_span,
 .accordion-body,
@@ -518,6 +516,10 @@ span {
     padding-bottom: 35px;
 }
 
+.overlay-logo img{
+    width: 200px;
+}
+
 
 @media (max-width: 1253px) {
 
@@ -571,8 +573,6 @@ span {
         display: flex;
     }
 
-
-
     .overlay {
         height: 0%;
         width: 100%;
@@ -605,7 +605,7 @@ span {
     .overlay a {
         padding: 8px;
         text-decoration: none;
-        font-size: 36px;
+        font-size: 30px;
         color: #9a9a9a;
         display: block;
         transition: 0.3s;
@@ -1017,7 +1017,7 @@ section {
 
 .list_item_feature h3 {
     position: absolute;
-    font-size: 40px;
+    font-size: 32px;
     color: #FFFCF5;
     font-family: 'Italiana';
     letter-spacing: 3px;
@@ -1315,10 +1315,10 @@ section {
     margin-top: 1rem;
 }
 
-.en_prod_name,
-.ch_prod_name {
+.bestseller_content p {
     font-size: 16px;
-    letter-spacing: 3px;
+    text-align: center;
+    letter-spacing: 0.5px;
     line-height: 1.5;
 }
 
@@ -1326,24 +1326,6 @@ section {
 .bestseller_tabcontent a {
     text-decoration: none;
     color: #000000;
-}
-
-.ch_prod_name {
-    position: relative;
-    top: 4px;
-}
-
-.ch_prod_name2 {
-    margin-top: 12px;
-    letter-spacing: 3px;
-    line-height: 1.5;
-}
-
-.en_prod_money {
-    font-size: 24px;
-    margin-top: 10px;
-    letter-spacing: 3px;
-    line-height: 1.5;
 }
 
 .side_title {
@@ -1513,14 +1495,8 @@ section {
         width: 100%;
     }
 
-    .en_prod_name,
-    .ch_prod_name,
-    .ch_prod_name2 {
-        font-size: 12px;
-    }
-
-    .en_prod_money {
-        font-size: 16px;
+    .bestseller_content p {
+        font-size: 14px;
     }
 
     .view_all {

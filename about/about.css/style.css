@@ -487,6 +487,10 @@ span {
     padding-bottom: 35px;
 }
 
+.overlay-logo img{
+    width: 200px;
+}
+
 
 @media (max-width: 1253px) {
 
@@ -551,6 +555,13 @@ span {
         overflow-y: hidden;
         transition: 0.5s;
     }
+    
+    .overlay-logo {
+        position: absolute;
+        top: 35px;
+        left: 20px;
+        width: 50%;
+    }
 
     .overlay-content {
         position: relative;
@@ -563,7 +574,7 @@ span {
     .overlay a {
         padding: 8px;
         text-decoration: none;
-        font-size: 36px;
+        font-size: 30px;
         color: #9a9a9a;
         display: block;
         transition: 0.3s;
