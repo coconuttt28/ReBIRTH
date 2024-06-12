@@ -22,7 +22,7 @@ let allProducts = [
     color: "white",
     category: "indoor",
     amount: "2399",
-    img: "./images/FL2.svg",
+    img: "./images/FL2.jpg",
     name: "Forest Whispers",
     title: "-森林密語-",
     price: "NT$ 2,399",

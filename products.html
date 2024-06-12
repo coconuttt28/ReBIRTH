@@ -124,24 +124,23 @@
     <main>
         <article class="products_section">
             <div class="pic">
-                <img class="custom_block_4" src="./images/FL2.svg" alt="" />
-                <div class="small_pic">
-                    <img src="./images/Img-s1.png" alt="" />
-                    <img src="./images/Img-s2.png" alt="" />
-                    <img src="./images/Img-s3.png" alt="" />
+                <img id="currentImage" class="custom_block_4" src="./images/FL2.jpg" alt="Main Product Image" />
+                <div class="thumbnail-images">
+                    <img class="thumbnail" src="./images/FL2.jpg" alt="Thumbnail 1" onclick="changeImage(this)" />
+                    <img class="thumbnail" src="./images/Img-s1.jpg" alt="Thumbnail 2" onclick="changeImage(this)" />
+                    <img class="thumbnail" src="./images/Img-s2.jpg" alt="Thumbnail 3" onclick="changeImage(this)" />
                 </div>
             </div>
             <div class="des">
                 <h3>Forest Whispers -森林密語-</h3>
-                <p>售價：NT$2,399</p>
-                <p>此款包含：滿天星、棉花</p>
+                <p class="price">售價：NT$2,399</p>
+                <p>使用花種：滿天星、棉花</p>
                 <p>尺寸：<input type="radio" name="size" id="size" value="" />大(55CM) <input type="radio" name="size"
                         id="size" value="" />中(45CM)<input type="radio" name="size" id="size" value="" />小(25CM)</p>
-                <p>森林密語，由滿天星與棉花編織而成的永生花，靜靜述說著大自然的秘密。<br>
-
-                    滿天星綻放著無數的星光，如同森林中的微光點點，閃耀著無盡的希望與奇蹟。<br>
-                    棉花柔軟如雲，輕輕飄舞著，宛如森林中的柔風，彷彿在述說著大地的溫暖和慈愛，輕輕地觸摸每一個靈魂。<br>
-                    它們是夜空中最美麗的守護者，為森林注入了夢幻與浪漫的氛圍。
+                <p class="products-detail">
+                    森林密語，由滿天星與棉花編織而成的永生花，靜靜述說著大自然的秘密。
+                    滿天星綻放著無數的星光，如同森林中的微光點點，閃耀著無盡的希望與奇蹟。
+                    棉花柔軟如雲，宛如森林中的柔風，彷彿在述說著大地的溫暖和慈愛。
                 </p>
                 <p>加購：<input type="checkbox" name="add" id="add" value="" />手工小卡(NT$50)
                     <input type="checkbox" name="add1" id="add1" value="" />精緻包裝提袋、禮盒(NT$100)
@@ -150,6 +149,7 @@
                     <button class="button" onclick="decrement()">-</button>
                     <span id="count">1</span>
                     <button class="button" onclick="increment()">+</button>
+
                 </p>
                 <div class="button_send_block">
                     <button class="button_send" onclick="send()">加入購物車</button>
@@ -160,19 +160,25 @@
         <div class="link-top"></div>
 
         <div class="additional">
-            <h5>額外服務</h5>
+            <p>額外服務</p>
             <div class="service">
-                <img src="./images/add_card.svg" alt="">
-                <img src="./images/add_after.svg" alt="">
+                <img src="./images/add_card.svg" alt="卡片代寫服務">
+                <img src="./images/add_after.svg" alt="售後服務">
+                <img class="middle-2" src="./images/add_box2.svg" alt="包裝禮盒服務">
             </div>
             <div class="middle">
-                <img src="./images/add_box.svg" alt="">
+                <img src="./images/add_box.svg" alt="包裝禮盒服務">
             </div>
-
         </div>
 
-        <div>
-            <img class="note" src="./images/add_note.svg" alt="">
+        <div class="note">
+            <p class="note-title">購物須知</p>
+            <p class="note-text">
+                1.全館下單不限金額免運費（僅限台澎金馬地區）。<br>
+                2.實體商品與圖片可能因環境光線、產季因素等產生色差、此為正常現象，恕不接受因色差問題退換貨。<br>
+                3.下單後，每筆訂單都將由專人為您製作，為手工製品，無法取消訂單。<br>
+                4.一般商品製作工期為5-7天，客製商品製作工期為7-10天。若遇情人節、母親節、春節等特殊節日，物流可能會因單量過多導致延遲，建議您提前訂購，以免延宕。
+            </p>
         </div>
 
         <footer id="footer">
@@ -325,6 +331,15 @@
             var count = parseInt(countElement.innerText);
             count -= 1;
             countElement.innerText = count;
+        }
+
+        // 切換商品圖片
+        function changeImage(thumbnail) {
+            // 獲取主圖片元素
+            const mainImage = document.getElementById("currentImage");
+
+            // 設置主圖片的 src 為點擊的縮略圖的 src
+            mainImage.src = thumbnail.src;
         }
         // 彈出式登入
         function customizeWindowEvent() {
