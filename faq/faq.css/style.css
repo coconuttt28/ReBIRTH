@@ -336,8 +336,13 @@ html {
 
 /* 側欄購物車bootstrap樣式 */
 .offcanvas-title {
-    font-size: 24px;
+    font-size: 20px;
     color: #445251;
+}
+
+.offcanvas-header {
+    background-color: #FFFCF5;
+    border-bottom: 1px solid;
 }
 
 .cartbtn.btn-secondary {

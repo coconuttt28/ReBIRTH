@@ -326,6 +326,7 @@ body {
   font-size: 20px;
   color: #445251;
   text-decoration: none;
+  font-family: 'Noto Serif TC', serif;
 }
 
 .cartbtn.btn-secondary {
@@ -804,7 +805,6 @@ h2 {
 
 .offcanvas-header {
   background-color: #FFFCF5;
-  padding-left: 40px;
   border-bottom: 1px solid;
 }
 
