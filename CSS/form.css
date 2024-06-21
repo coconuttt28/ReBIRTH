@@ -9,68 +9,66 @@
 
 /*form styles*/
 #msform {
-  width: 50%;
+  display: inline-block;
   margin: 50px auto;
-  text-align: center;
-  position: relative;
 }
 
 #msform fieldset {
-  background: rgba(214,216,201,0.4);
+  background: rgba(214, 216, 201, 0.4);
   border: 0 none;
   border-radius: 8px;
   box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
   padding: 20px 30px;
   box-sizing: border-box;
-  width: 100%;
+  width: 850px;
+  min-height: 320px;
   margin: 0;
-
-  /*stacking fieldsets above each other*/
+  font-family: "Noto Serif TC", serif;
   position: relative;
+  display: block;
 }
+
 /*Hide all except first fieldset*/
 #msform fieldset:not(:first-of-type) {
   display: none;
 }
+
 /*inputs*/
 /* #msform input, #msform textarea { */
 .keyin {
-  padding: 15px;
   border: 1px solid #ccc;
-  border-radius: 3px;
-  /* margin-bottom: 10px; */
+  border-radius: 4px;
   width: 50%;
   box-sizing: border-box;
-  font-family: "Noto Serif TC", serif;
-  color: #2c3e50;
+  color: #4D5139;
   font-size: 14px;
+  margin: 15px 0;
+  text-align: center;
+  height: 34px;
+  letter-spacing: 0.5px;
+  line-height: 1.5;
 }
+
 .step2 {
   padding: 15px;
   border: 1px solid #ccc;
   border-radius: 3px;
-  /* 	margin-bottom: 10px; */
   width: 100%;
   box-sizing: border-box;
-  font-family: "Noto Serif TC", serif;
   color: #2c3e50;
   font-size: 16px;
   display: flex;
 }
 
 .purpose {
-  /* border-right: 1px solid; */
-  /* margin: 15px;
-  padding: 15px; */
   width: 100%;
+  letter-spacing: 0.5px;
+  line-height: 1.5;
 }
 
 .purpose h4,
 .FL h4 {
-  text-decoration-line: underline;
   text-align: center;
-  letter-spacing: 0.5px;
-line-height: 1.5;
 }
 
 
@@ -79,26 +77,43 @@ line-height: 1.5;
   height: 90px;
 }
 
+.fs-comment {
+  font-size: 14px;
+}
+
+.textarea {
+  height: auto;
+}
 
 /*buttons*/
 #msform .action-button {
   width: 100px;
-  background: #4d5139;
+  background: #445251;
   color: #fffcf5;
   border: 0 none;
   border-radius: 1px;
   cursor: pointer;
   padding: 10px;
-  margin: 10px 5px;
+  margin: 20px 5px 35px;
   text-decoration: none;
   font-size: 16px;
   border-radius: 4px;
 }
+
 #msform .action-button:hover,
 #msform .action-button:focus {
   box-shadow: 0 0 0 2px white, 0 0 0 3px #fffcf5;
 }
+
 /*headings*/
+.step1 p,
+.step2 p {
+  font-size: 20px;
+  color: #4d5139;
+  font-family: "Noto Serif TC", serif;
+  margin: 44px 0;
+}
+
 .fs-title {
   font-size: 20px;
   text-transform: uppercase;
@@ -107,23 +122,27 @@ line-height: 1.5;
   font-family: "Noto Serif TC", serif;
   margin-top: 0px;
 }
+
 .fs-subtitle {
-  font-weight: normal;
   font-size: 16px;
   color: #4d5139;
-  margin-bottom: 20px;
-  margin-top: 20px;
+  margin: 20px 0;
   font-family: "Noto Serif TC", serif;
 }
+
+.title2 {
+  border-bottom: 1px solid #4D5139;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
 /*progressbar*/
 #progressbar {
   margin-bottom: 30px;
   overflow: hidden;
-  /*CSS counters to number the steps*/
-  /* counter-reset: step; */
 }
+
 #progressbar li {
-  list-style-type: none;
   color: #4d5139;
   font-size: 16px;
   width: 33.33%;
@@ -131,10 +150,9 @@ line-height: 1.5;
   position: relative;
   font-family: "Noto Serif TC", serif;
 }
+
 #progressbar .active::before {
   content: "Step1";
-  /* counter(step);
-	counter-increment: step; */
   width: 80px;
   line-height: 80px;
   display: block;
@@ -202,11 +220,94 @@ line-height: 1.5;
 }
 
 .checkbox {
-  margin: auto;
-  text-align: center;
-  margin-top: 20%;
+  margin: 50px auto;
 }
 
 .step3 {
   height: 50vh;
+}
+
+
+@media (max-width: 992px) {
+  #msform fieldset{
+    width: 650px;
+  }
+  
+
+}
+
+@media (max-width: 768px) {
+  #msform fieldset{
+    width: 450px;
+  }
+
+  .step1 p,
+  .step2 p {
+    font-size: 18px;
+    margin: 22px 0;
+  }
+
+  .step2 {
+    font-size: 14px;
+  }
+
+  .fs-title {
+    font-size: 16px;
+  }
+
+  .fs-comment {
+    font-size: 12px;
+  }
+
+  .keyin {
+    width: 75%;
+    height: 24px;
+  }
+
+  .textarea {
+    height: auto;
+  }
+
+  #msform .action-button {
+    font-size: 14px;
+  }
+
+  #progressbar li {
+    font-size: 14px;
+  }
+
+  #progressbar .active::before,
+  #progressbar .active_2::before,
+  #progressbar .active_3::before {
+    font-size: 18px;
+    width: 75px;
+    line-height: 75px;
+  }
+}
+
+@media (max-width: 576px) {
+  #msform fieldset{
+    width: 320px;
+  }
+
+  .step1 p,
+  .step2 p{
+    font-size: 16px;
+  }
+
+  .fs-subtitle{
+    font-size: 14px;
+  }
+
+  .keyin{
+    font-size: 12px;
+  }
+
+  #progressbar .active::before,
+  #progressbar .active_2::before,
+  #progressbar .active_3::before {
+    font-size: 16px;
+    width: 65px;
+    line-height: 65px;
+  }
 }

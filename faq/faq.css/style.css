@@ -253,7 +253,7 @@ html {
     position: absolute;
     left: 0;
     top: 22px;
-    opacity: 1; 
+    opacity: 1;
 }
 
 .header_menu a:hover::after {
@@ -277,7 +277,7 @@ html {
 /* 小選單寬度 */
 .dropdown_menu li {
     float: none;
-    border-style:solid;
+    border-style: solid;
     box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.2);
 }
 
@@ -290,7 +290,7 @@ html {
     font-size: 14px;
 }
 
-.dropdown_menu li:hover{
+.dropdown_menu li:hover {
     background-color: #D6D8CA;
     transition: all .3s;
 }
@@ -481,7 +481,7 @@ span {
     padding-bottom: 35px;
 }
 
-.overlay-logo img{
+.overlay-logo img {
     width: 200px;
 }
 
@@ -557,6 +557,7 @@ span {
         left: 20px;
         width: 50%;
     }
+
     .overlay-content {
         position: relative;
         top: 25%;
@@ -757,7 +758,6 @@ section {
     border: 1px solid #4D5139;
     border-radius: 8px;
     margin-top: -15px;
-    backdrop-filter: blur(1.2px);
     background-color: #fffcf5c4;
     background: linear-gradient(to top bottom,
             rgba(255, 255, 255, 0.5),
@@ -775,7 +775,7 @@ section {
 
 @media (max-width: 768px) {
     #faq {
-        margin-top:72.06px
+        margin-top: 72.06px
     }
 
     .faq_list_item_text {
@@ -784,9 +784,16 @@ section {
 }
 
 @media (max-width: 576px) {
-    #faq{
+    .banner_faq {
+        min-height: 250px;
+        background-size: auto 1150px;
+        background-position: center -450px;
+    }
+
+    #faq {
         padding: 0 20px;
     }
+
     .faq_list_item_text {
         width: 326px;
     }
@@ -794,7 +801,7 @@ section {
     .title_faq h2 {
         font-size: 36px;
     }
-    
+
     .title_faq .ch_title {
         font-size: 14px;
     }

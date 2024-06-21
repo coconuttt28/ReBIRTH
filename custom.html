@@ -119,9 +119,9 @@
           <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
           <div class="overlay-logo">
             <a href="index.html">
-                <img src="./image/icon.svg" alt="《Re：BIRTH》永生花藝">
+              <img src="./image/icon.svg" alt="《Re：BIRTH》永生花藝">
             </a>
-        </div>
+          </div>
           <div class="overlay-content">
             <a href="about.html">About</a>
             <a href="shop.html">Shop</a>
@@ -177,16 +177,15 @@
       <h2>
         <span class="en_title">Custom Section<span class="ch_title"> / 客製專區</span>
       </h2>
-      <!-- <h2>Custom Section <span class="ch_title">/ 客製專區</span></h2> -->
       <ul class="icon">
         <li>
-          <a href="#steps" class="custom_delivery"></a>
+          <a href="#steps" class="btn-custom_delivery"></a>
         </li>
         <li>
-          <a href="#custom_full" class="custom_full"></a>
+          <a href="#custom_full" class="btn-custom_full"></a>
         </li>
         <li>
-          <a href="#custom_half" class="custom_half"></a>
+          <a href="#custom_half" class="btn-custom_half"></a>
         </li>
       </ul>
 
@@ -198,23 +197,11 @@
     <!-- 說明步驟區 -->
     <div id="steps">
       <div class="steps">
+        <div class="steps_bg_left"></div>
+        <div class="steps_bg_right"></div>
         <figure class="custom_steps">
           <img src="./images/custom_steps.svg" alt="" />
         </figure>
-
-        <figure class="custom_flower_delivery">
-          <img src="./images/Flower_Delivery.svg" alt="" />
-        </figure>
-
-        <figure class="custom_Img_right">
-          <img data-aos="fade-up" data-aos-duration="1000" src="./images/custom_Img_right.jpg" alt="">
-        </figure>
-
-        <figure class="custom_Img_left">
-          <img data-aos="fade-up" data-aos-duration="1000" src="./images/custom_Img_left.jpg" alt="">
-        </figure>
-
-        <a href="shop.html">Shop Now</a>
       </div>
     </div>
 
@@ -223,7 +210,7 @@
 
     <div id="custom_full">
       <div class="custom_full">
-        <h5>全客製化</h5>
+        <p>全客製化</p>
       </div>
       <div class="custom_full_1">
         <p>製作您的專屬花禮</p>
@@ -240,54 +227,54 @@
 
           <!-- fieldsets -->
           <fieldset class="step1">
-
-            <h3 class="fs-subtitle"></h3>
-            <h3 class="fs-subtitle">*訂購者姓名</h3>
-            <input class="keyin" type="text" name="訂購者姓名" placeholder="請輸入訂購者姓名" />
-            <h3 class="fs-subtitle">*行動電話</h3>
-            <input class="keyin" type="tel" name="行動電話" placeholder="09XX-XXX-XXX" />
-            <h3 class="fs-subtitle">E-mail</h3>
-            <input class="keyin" type="email" name="E-mail" placeholder="xxx@mail.com" />
-            <h3 class="fs-subtitle">*送達日期</h3>
-            <input class="keyin" type="date" name="送達日期" placeholder="DD-MM-YYYY" />
+            <p>｜基本資料｜</p>
+            <h3 class="fs-subtitle title1"></h3>
+            <h3 class="fs-subtitle title1">*訂購者姓名</h3>
+            <input class="keyin" type="text" name="訂購者姓名" required placeholder="請輸入訂購者姓名" />
+            <h3 class="fs-subtitle title1">*行動電話</h3>
+            <input class="keyin" type="tel" name="行動電話" required placeholder="09xx-xxx-xxx" maxlength="10" />
+            <h3 class="fs-subtitle title1">E-mail</h3>
+            <input class="keyin" type="email" name="E-mail" required placeholder="xxx@mail.com" />
+            <h3 class="fs-subtitle title1">*送達日期</h3>
+            <input class="keyin" type="date" name="送達日期" required placeholder="DD-MM-YYYY" />
             <br />
             <input type="button" name="next" class="next action-button" value="下一步" />
           </fieldset>
           <fieldset class="step2">
-            <h2 class="fs-title">｜客製需求｜</h2>
+            <p>｜客製需求｜</p>
             <div class="purpose">
-              <h4 class="fs-subtitle">*訂購用途</h4>
+              <h4 class="fs-subtitle title2">*訂購用途</h4><br>
               <input type="radio" name="p1" />婚禮，含捧花、胸花
               <input type="radio" name="p1" />特殊節日，如母親節、父親節<br />
               <input type="radio" name="p1" />向心儀對象傳遞心意
               <input type="radio" name="p1" />生日慶祝
               <input type="radio" name="p1" />表達慰問與關懷<br />
               <input type="radio" name="p1" />居家裝飾、辦公桌小盆栽等室內美化<br />
-              <h4 class="fs-subtitle">*款式選擇</h4>
-              <input type="radio" name="size" />25cm花束（NT$1,000-NT$1,800)<br />
-              <input type="radio" name="size" />45cm花束（NT$2,300-NT$3,500)<br />
-              <input type="radio" name="size" />55cm花束（NT$4,000-NT$5,500)<br />
-              <input type="radio" name="size" />小盆栽，適合放置辦公桌（NT$900-NT$1,500)<br />
-              <input type="radio" name="size" />中盆栽，適合作為居家桌櫃擺設（NT$2,500-NT$4,500)<br />
-              <input type="radio" name="size" />大盆栽，適合作為居家落地擺設（NT$5,000-NT$7,500)<br />
+              <h4 class="fs-subtitle title2">*款式選擇</h4><br>
+              <input type="radio" name="size" />25cm花束（NT$1,000-NT$1,800）<br />
+              <input type="radio" name="size" />45cm花束（NT$2,300-NT$3,500）<br />
+              <input type="radio" name="size" />55cm花束（NT$4,000-NT$5,500）<br />
+              <input type="radio" name="size" />小盆栽，適合放置辦公桌（NT$900-NT$1,500）<br />
+              <input type="radio" name="size" />中盆栽，適合作為居家桌櫃擺設（NT$2,500-NT$4,500）<br />
+              <input type="radio" name="size" />大盆栽，適合作為居家落地擺設（NT$5,000-NT$7,500）<br />
             </div>
 
             <div class="FL">
-              <h4 class="fs-subtitle">*花種選擇</h4>
-              <h4 class="fs-subtitle">
+              <h4 class="fs-subtitle title2">*花種選擇</h4><br>
+              <span class="fs-comment">
                 若無想法也可留下心儀顏色或花種，將由專人與您聯繫溝通
-              </h4>
+              </span><br>
               <input class="keyin" type="text" name="輸入品項" class="note" placeholder="請輸入顏色或花種名稱" /><br />
-              <h4 class="fs-subtitle">*其他需求</h4>
+              <h4 class="fs-subtitle title2">*其他需求</h4><br>
 
-              <input class="keyin" class="other" type="text" name="輸入品項" class="note" placeholder="" /><br />
+              <textarea class="keyin textarea" class="other" type="text" name="輸入品項" class="note" rows="5" cols="15" placeholder=""></textarea><br />
             </div>
 
             <input type="button" name="next" class="next action-button" value="送出表單" />
           </fieldset>
           <fieldset class="step3">
             <img class="checkbox" src="./images/checkbox.svg" alt="" />
-            <h2 class="fs-title">訂單已送出，將有專人與您聯繫</h2>
+            <p class="fs-title">訂單已送出，將有專人與您聯繫</p>
           </fieldset>
         </form>
       </div>
@@ -297,33 +284,36 @@
     <div id="custom_half">
       <div class="custom_section_half">
         <div class="custom_full">
-          <h5>半客製化</h5>
+          <p>半客製化</p>
         </div>
         <div class="custom_full_1">
           <p>線上預覽配色功能</p>
         </div>
 
         <div class="custom_selector">
-          <p>可選款式</p>
+          <p class="selector-subtitle">可選款式</p>
           <div class="custom_block">
             <article>
               <img class="custom_block_1" src="./images/FL6_BG.jpg" alt="" />
-              <h3>Spring Fling</h3>
-              <h4>-春日之舞-</h4>
+              <p>Spring Fling</p>
+              <p>-春日之舞-</p>
             </article>
             <article>
               <img class="custom_block_2" src="./images/FL3.jpg" alt="" />
-              <h3>Morning Dew</h3>
-              <h4>-晨露-</h4>
+              <p>Morning Dew</p>
+              <p>-晨露-</p>
             </article>
             <article>
-              <img class="custom_block_3" src="./images/FL22.jpg" alt="" />
-              <h3>Garden of Dreams</h3>
-              <h4>-夢幻花園-</h4>
+              <img class="custom_block_3" src="./images/FL25.jpg" alt="" />
+              <p>Garden Grace</p>
+              <p>-花園恩典-</p>
             </article>
           </div>
           <article class="custom_selector_1">
+            <div class="custom_selector_img">
             <img class="custom_block_4" src="./images/FL6_BG.jpg" alt="" />
+          </div>
+          <div>
             <p>選擇款式: 春日之舞</p>
             <p>售價：NT$1,299</p>
             <p>
@@ -350,8 +340,9 @@
               <button class="button" onclick="increment()">+</button>
             </p>
             <div class="button_send_block">
-              <button class="button_send" onclick="send()">加入購物車</button>
+              <button class="selector_button_send" onclick="send()">加入購物車</button>
             </div>
+          </div>
           </article>
         </div>
       </div>

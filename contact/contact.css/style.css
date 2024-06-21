@@ -997,7 +997,7 @@ input[type="submit"]:hover {
 
 @media (max-width: 576px) {
     #getInTouch {
-        padding: 0px 20px;
+        padding: 30px 20px;
     }
 
     .getInTouch_h2,

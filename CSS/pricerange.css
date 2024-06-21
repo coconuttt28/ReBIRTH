@@ -6,12 +6,18 @@ p {
 }
 
 .wrapper {
-  height: 10vh;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   overflow: hidden;
+}
+
+@media (max-width:768px) {
+  .wrapper {
+    justify-content: flex-start;
+  }
 }
 
 .filter-price {
