@@ -1,192 +1,313 @@
+.case-wrapper {
+  margin: 0 10px;
+  transition: all 0.5s ease;
+  position: relative;
+  z-index: 1;
+  overflow: visible;
+}
+
+.case-wrapper img {
+  width: 100%;
+  height: auto;
+  transition: all 0.5s ease;
+  position: relative;
+}
+
+.case-wrapper.active {
+  z-index: 2;
+}
+
+.case-wrapper.active img,
+.case-wrapper.slick-current img {
+  height: 450px;
+  transform-style: preserve-3d;
+  transition: 0.3s;
+}
+
+.case-wrapper.active p {
+  display: block;
+}
+
+.slider-text {
+  text-align: left;
+  font-size: 16px;
+  color: #4D5139;
+  font-family: 'Noto Serif TC', serif;
+  margin-top: 20px;
+  white-space: pre-wrap;
+  position: relative;
+  display: flex;
+  flex-direction: row-reverse;
+  bottom: 90px;
+  width: 976px;
+  justify-content: center;
+}
+
+.case_gift_rwd .rotate-90,
+.case_wedding_rwd .rotate-90,
+.case_indoor_rwd .rotate-90 {
+  display: none;
+  width: auto;
+  height: auto;
+  position: relative;
+  top: 0;
+}
+
 /* Slider */
 .slick-slider {
-    position: relative;
-    display: block;
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-  }
-  
-  .slick-list {
-    position: relative;
-    overflow: hidden;
-    display: block;
-    margin: 0;
-    padding: 0;
-  }
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  padding: 50px 0;
+  height: 550px;
+}
 
-  .slick-slide {
-    float: left;
-    height: 100%;
-    min-height: 1px;
-    display: none;
-  }
-  .slick-slide img {
-    display: block;
-  }
-  .slick-slide img.slick-loading {
-    background: white url(./ajax-loader.gif) center center no-repeat;
-    padding-bottom: 100%;
-  }
-  .slick-slide.dragging img {
-    pointer-events: none;
-  }
-  .slick-initialized .slick-slide {
-    display: block;
-  }
-  .slick-loading .slick-slide {
-    visibility: hidden;
-  }
-  .slick-vertical .slick-slide {
-    display: block;
-    height: auto;
-    border: 1px solid transparent;
-  }
-  
-  /* Icons */
-  @font-face {
-    font-family: "slick";
-    src: url("./fonts/slick.eot");
-    src: url("./fonts/slick.eot?#iefix") format("embedded-opentype"), url("./fonts/slick.woff") format("woff"), url("./fonts/slick.ttf") format("truetype"), url("./fonts/slick.svg#slick") format("svg");
-    font-weight: normal;
-    font-style: normal;
-  }
-  /* Arrows */
-  .slick-prev,
-  .slick-next {
-    position: absolute;
-    display: block;
-    height: 20px;
-    width: 20px;
-    line-height: 0;
-    font-size: 0;
-    cursor: pointer;
-    background: transparent;
-    color: transparent;
-    top: 50%;
-    margin-top: -10px;
-    padding: 0;
-    border: none;
-    outline: none;
-  }
-  .slick-prev:focus,
-  .slick-next:focus {
-    outline: none;
-  }
-  .slick-prev.slick-disabled:before,
-  .slick-next.slick-disabled:before {
-    opacity: 0.25;
-  }
-  
-  .slick-prev:before, .slick-next:before {
-    font-family: "slick";
-    font-size: 50px;
-    line-height: 1;
-    color: rgb(14, 13, 13);
-    opacity: 0.85;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-  
-  .slick-prev {
-    left: -25px;
-  }
-  .slick-prev:before {
-    content: '\2039';
-  }
-  
-  .slick-next {
-    right: -25px;
-  }
-  .slick-next:before {
-    content: '\203A';
-    
-  }
-  
-  
-  .content {
-    width: 80%;
-    margin: auto;
-    margin-bottom: 50px;
-  }
+.slick-list {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
 
-  @media (max-width: 1024px) {
-    .content{
-      width: 100%;
-    }
-    
-  }
-  
-  .case_slider {
-    width: 80%;
-    margin: auto;
-  }
+.slick-slide {
+  float: left;
+  height: 100%;
+  min-height: 1px;
+  display: none;
+}
+
+.slick-slide img {
+  display: block;
+}
+
+.slick-slide img.slick-loading {
+  background: white url(./ajax-loader.gif) center center no-repeat;
+  padding-bottom: 100%;
+}
+
+.slick-slide.dragging img {
+  pointer-events: none;
+}
+
+.slick-initialized .slick-slide {
+  display: block;
+}
+
+.slick-loading .slick-slide {
+  visibility: hidden;
+}
+
+.slick-vertical .slick-slide {
+  display: block;
+  height: auto;
+  border: 1px solid transparent;
+}
+
+.case-wrapper {
+  margin: 0 10px;
+}
+
+/* Icons */
+@font-face {
+  font-family: "slick";
+  src: url("./fonts/slick.eot");
+  src: url("./fonts/slick.eot?#iefix") format("embedded-opentype"), url("./fonts/slick.woff") format("woff"), url("./fonts/slick.ttf") format("truetype"), url("./fonts/slick.svg#slick") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Arrows */
+.slick-prev,
+.slick-next {
+  position: absolute;
+  display: block;
+  height: 20px;
+  width: 20px;
+  line-height: 0;
+  font-size: 0;
+  cursor: pointer;
+  background: transparent;
+  color: transparent;
+  top: 50%;
+  margin-top: -10px;
+  padding: 0;
+  border: none;
+  outline: none;
+}
+
+.slick-prev:focus,
+.slick-next:focus {
+  outline: none;
+}
+
+.slick-prev.slick-disabled:before,
+.slick-next.slick-disabled:before {
+  opacity: 0.25;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  content: "";
+  display: inline-block;
+  position: relative;
+  width: 70px;
+  height: 70px;
+  bottom: 25px;
+  color: #445251;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.slick-prev {
+  left: -25px;
+}
+
+.slick-prev:before {
+  background-image: url(../image/P5-arrow-prev.svg);
+  right: 58px;
+}
+
+.slick-next {
+  right: -25px;
+}
+
+.slick-next:before {
+  background-image: url(../image/P5-arrow-next.svg);
+  left: 10px;
+}
+
+.line-left {
+  left: 0;
+  width: 50vw;
+  height: 3px;
+  background-color: #4D5139;
+  position: absolute;
+}
+
+.line-right {
+  right: 0;
+  width: 50vw;
+  height: 3px;
+  background-color: #4D5139;
+  position: absolute;
+}
+
+.content {
+  width: 80%;
+  margin: auto;
+  margin-bottom: 50px;
+}
+
+.case_slider {
+  margin: 0 210px;
+}
 
 
-  .case_slider img{
-    width: 175px;
-    height: 250px;
-    object-fit: cover;
-  }
+.case_slider img {
+  width: 100%;
+  height: 335px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 4px;
+}
 
 
-  @media (max-width: 1024px) {
-    .case_slider img{
-      width: 150px;
-    height: 195px;
-    }
-    
-  }
 
-.slider p{
-  width: 240%;
-  height: 13vh;
-  font-size: 18px;
-  padding-top: 50px;
-  padding-left: 150%;
-  font-size: 20px;
+.slider p {
+  text-align: left;
+  font-size: 16px;
+  color: #4D5139;
   font-family: 'Noto Serif TC', serif;
-  text-align: center;
-  color:#4D5139;
-  box-sizing: content-box;
-  white-space: pre-line;
-
+  white-space: pre-wrap;
+  bottom: 0px;
+  width: 300%;
+  position: absolute;
+  left: calc(100% + 20px);
+  letter-spacing: 0.5px;
+  line-height: 1.1;
 }
 
-@media (max-width: 1512px) {
-  .slider p{
-    width: 200%;
-    padding-left: 120%;
-    height: 15vh;
+.slick-now img {
+  width: auto;
+  height: 415px;
+}
+
+@media (max-width: 1625px) {
+  .slider p {
+    width: calc(200% + 20px);
   }
-  
 }
 
-@media (max-width: 1024px) {
-  .slider p{
-    width: 200%;
-    padding-left: 130%;
-    
-    font-family: 'Noto Serif TC', serif;
-    height: 18vh;
+@media (max-width: 1200px) {
+  .content {
+    margin-bottom: 0;
   }
-  
+
+  .case_slider {
+    margin: 0 90px 50px;
+  }
+
+
+  .case_gift_rwd .rotate-90,
+  .case_wedding_rwd .rotate-90,
+  .case_indoor_rwd .rotate-90 {
+    display: flex;
+  }
+
+  .case_gift_rwd {
+    padding-bottom: 10px;
+  }
+
+  .case_wedding_rwd {
+    display: flex;
+    justify-content: flex-end;
+  }
 }
+
+@media (max-width: 992px) {
+  .slider p {
+    width: 100%;
+    font-size: 14px;
+    /* line-height: 1.3; */
+  }
+}
+
 @media (max-width: 768px) {
-  .slider p{
-    width: 180%;
-    padding-left: 80%;
-    font-size: 18px;
+  .slider p {
+    position: relative;
+    padding-top: 20px;
+    left: 0;
   }
-  
-}
 
-.slick-now img{
-transform: scale(1.75);
-}
-
-@media (max-width: 768px) {
-  .slick-now img{
+  .slick-now img {
     transform: scale(1.5);
   }
-  
+
+  .case_gift_rwd .rotate-90,
+  .case_wedding_rwd .rotate-90,
+  .case_indoor_rwd .rotate-90 {
+    height: 40px;
+  }
+
+  .content {
+    width: 60%;
+  }
+
+  .case-wrapper.active img,
+  .case-wrapper.slick-current img {
+    height: 350px;
+  }
+
+}
+
+@media (max-width: 576px) {
+  .case_slider {
+    margin: 0 20px 50px;
+}
+
+  .slider p {
+    line-height: 1.3;
+  }
 }

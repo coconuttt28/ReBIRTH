@@ -28,6 +28,8 @@
   display: block;
 }
 
+
+
 /*Hide all except first fieldset*/
 #msform fieldset:not(:first-of-type) {
   display: none;
@@ -71,6 +73,10 @@
   text-align: center;
 }
 
+.purpose input {
+  margin: 8px 0;
+}
+
 
 .FL .other {
   width: 100%;
@@ -83,6 +89,12 @@
 
 .textarea {
   height: auto;
+}
+
+.inner-step3 {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 /*buttons*/
@@ -116,11 +128,9 @@
 
 .fs-title {
   font-size: 20px;
-  text-transform: uppercase;
   color: #4d5139;
-  margin-bottom: 10px;
   font-family: "Noto Serif TC", serif;
-  margin-top: 0px;
+  flex: 1;
 }
 
 .fs-subtitle {
@@ -220,7 +230,9 @@
 }
 
 .checkbox {
-  margin: 50px auto;
+  margin: 0px auto;
+  flex: 1;
+  width: 100px;
 }
 
 .step3 {
@@ -229,15 +241,15 @@
 
 
 @media (max-width: 992px) {
-  #msform fieldset{
+  #msform fieldset {
     width: 650px;
   }
-  
+
 
 }
 
 @media (max-width: 768px) {
-  #msform fieldset{
+  #msform fieldset {
     width: 450px;
   }
 
@@ -286,20 +298,20 @@
 }
 
 @media (max-width: 576px) {
-  #msform fieldset{
+  #msform fieldset {
     width: 320px;
   }
 
   .step1 p,
-  .step2 p{
+  .step2 p {
     font-size: 16px;
   }
 
-  .fs-subtitle{
+  .fs-subtitle {
     font-size: 14px;
   }
 
-  .keyin{
+  .keyin {
     font-size: 12px;
   }
 

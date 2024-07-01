@@ -244,19 +244,17 @@
             <p>｜客製需求｜</p>
             <div class="purpose">
               <h4 class="fs-subtitle title2">*訂購用途</h4><br>
-              <input type="radio" name="p1" />婚禮，含捧花、胸花
-              <input type="radio" name="p1" />特殊節日，如母親節、父親節<br />
-              <input type="radio" name="p1" />向心儀對象傳遞心意
-              <input type="radio" name="p1" />生日慶祝
-              <input type="radio" name="p1" />表達慰問與關懷<br />
-              <input type="radio" name="p1" />居家裝飾、辦公桌小盆栽等室內美化<br />
+              <input type="radio" name="p1" />節日慶祝<br>
+              <input type="radio" name="p1" />婚禮，含捧花、胸花<br>
+              <input type="radio" name="p1" />居家裝飾、辦公桌小盆栽等室內美化<br>
+              <input type="radio" name="p1" />其他<br>
               <h4 class="fs-subtitle title2">*款式選擇</h4><br>
-              <input type="radio" name="size" />25cm花束（NT$1,000-NT$1,800）<br />
-              <input type="radio" name="size" />45cm花束（NT$2,300-NT$3,500）<br />
-              <input type="radio" name="size" />55cm花束（NT$4,000-NT$5,500）<br />
-              <input type="radio" name="size" />小盆栽，適合放置辦公桌（NT$900-NT$1,500）<br />
-              <input type="radio" name="size" />中盆栽，適合作為居家桌櫃擺設（NT$2,500-NT$4,500）<br />
-              <input type="radio" name="size" />大盆栽，適合作為居家落地擺設（NT$5,000-NT$7,500）<br />
+              <input type="radio" name="size" />25cm花束（NT$1,000-NT$1,800）<br>
+              <input type="radio" name="size" />45cm花束（NT$2,300-NT$3,500）<br>
+              <input type="radio" name="size" />55cm花束（NT$4,000-NT$5,500）<br>
+              <input type="radio" name="size" />小盆栽，適合放置辦公桌（NT$900-NT$1,500）<br>
+              <input type="radio" name="size" />中盆栽，適合作為居家桌櫃擺設（NT$2,500-NT$4,500）<br>
+              <input type="radio" name="size" />大盆栽，適合作為居家落地擺設（NT$5,000-NT$7,500）<br>
             </div>
 
             <div class="FL">
@@ -267,14 +265,17 @@
               <input class="keyin" type="text" name="輸入品項" class="note" placeholder="請輸入顏色或花種名稱" /><br />
               <h4 class="fs-subtitle title2">*其他需求</h4><br>
 
-              <textarea class="keyin textarea" class="other" type="text" name="輸入品項" class="note" rows="5" cols="15" placeholder=""></textarea><br />
+              <textarea class="keyin textarea" class="other" type="text" name="輸入品項" class="note" rows="5" cols="15"
+                placeholder=""></textarea><br />
             </div>
 
             <input type="button" name="next" class="next action-button" value="送出表單" />
           </fieldset>
           <fieldset class="step3">
-            <img class="checkbox" src="./images/checkbox.svg" alt="" />
-            <p class="fs-title">訂單已送出，將有專人與您聯繫</p>
+            <div class="inner-step3">
+              <img class="checkbox" src="./images/checkbox.svg" alt="" />
+              <p class="fs-title">訂單已送出，將有專人與您聯繫</p>
+            </div>
           </fieldset>
         </form>
       </div>
@@ -311,38 +312,38 @@
           </div>
           <article class="custom_selector_1">
             <div class="custom_selector_img">
-            <img class="custom_block_4" src="./images/FL6_BG.jpg" alt="" />
-          </div>
-          <div>
-            <p>選擇款式: 春日之舞</p>
-            <p>售價：NT$1,299</p>
-            <p>
-              此款可選花種：<input type="radio" name="kind" value="" id="white_FL" />白雛菊
-              <input type="radio" name="kind" value="" id="pink_FL" />粉雛菊
-            </p>
-            <p>
-              尺寸：<input type="radio" name="size" id="size" value="" />大(55CM)
-              <input type="radio" name="size" id="size" value="" />中(45CM)<input type="radio" name="size" id="size"
-                value="" />小(25CM)
-            </p>
-            <p>
-              包裝：<input type="radio" name="pack" value="beige" id="beige" />米色
-              <input type="radio" name="pack" value="white" id="white" />白色
-            </p>
-            <p>
-              加購：<input type="checkbox" name="add" id="add" value="" />手工小卡(NT$50)
-              <input type="checkbox" name="add1" id="add1" value="" />精緻包裝提袋、禮盒(NT$100)
-            </p>
-            <p class="counter">
-              數量:
-              <button class="button" onclick="decrement()">-</button>
-              <span id="count">1</span>
-              <button class="button" onclick="increment()">+</button>
-            </p>
-            <div class="button_send_block">
-              <button class="selector_button_send" onclick="send()">加入購物車</button>
+              <img class="custom_block_4" src="./images/FL6_BG.jpg" alt="" />
             </div>
-          </div>
+            <div>
+              <p>選擇款式: 春日之舞</p>
+              <p>售價：NT$1,299</p>
+              <p>
+                此款可選花種：<input type="radio" name="kind" value="" id="white_FL" />白雛菊
+                <input type="radio" name="kind" value="" id="pink_FL" />粉雛菊
+              </p>
+              <p>
+                尺寸：<input type="radio" name="size" id="size" value="" />大(55CM)
+                <input type="radio" name="size" id="size" value="" />中(45CM)<input type="radio" name="size" id="size"
+                  value="" />小(25CM)
+              </p>
+              <p>
+                包裝：<input type="radio" name="pack" value="beige" id="beige" />米色
+                <input type="radio" name="pack" value="white" id="white" />白色
+              </p>
+              <p>
+                加購：<input type="checkbox" name="add" id="add" value="" />手工小卡(NT$50)
+                <input type="checkbox" name="add1" id="add1" value="" />精緻包裝提袋、禮盒(NT$100)
+              </p>
+              <p class="counter">
+                數量:
+                <button class="button" onclick="decrement()">-</button>
+                <span id="count">1</span>
+                <button class="button" onclick="increment()">+</button>
+              </p>
+              <div class="button_send_block">
+                <button class="selector_button_send" onclick="send()">加入購物車</button>
+              </div>
+            </div>
           </article>
         </div>
       </div>

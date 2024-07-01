@@ -879,6 +879,13 @@ div#search.offcanvas-body a {
   }
 }
 
+@media (max-width: 576px) {
+  .icon li {
+    width: 90px;
+    margin: 0 6px;
+  }
+}
+
 
 
 
@@ -1075,9 +1082,8 @@ input:focus {
 
 .custom_section_full {
   background: linear-gradient(rgb(255, 252, 245), rgb(255, 252, 245, 0.3)), url(../images/custom_full_bg.svg) no-repeat center 20%/cover;
-
   width: 100%;
-  height: 1260px;
+  height: auto;
   margin: auto;
   z-index: -1;
 }
@@ -1093,7 +1099,7 @@ input:focus {
   text-align: center;
 }
 
-.custom_section_half{
+.custom_section_half {
   padding: 0 20px;
 }
 
@@ -1211,7 +1217,7 @@ input:focus {
   margin-bottom: 0.5rem;
 }
 
-.custom_selector_img{
+.custom_selector_img {
   margin-bottom: 20px;
 }
 
@@ -1239,7 +1245,7 @@ input:focus {
 }
 
 @media (max-width: 768px) {
-  .selector-subtitle{
+  .selector-subtitle {
     font-size: 18px;
   }
 
@@ -1250,15 +1256,17 @@ input:focus {
     height: 175px;
   }
 
-  .custom_block p{
+  .custom_block p {
     font-size: 14px;
   }
 }
+
 @media (max-width: 576px) {
-  .selector-subtitle{
+  .selector-subtitle {
     font-size: 16px;
   }
-  .custom_block{
+
+  .custom_block {
     flex-direction: column;
     align-items: center;
   }
@@ -1309,7 +1317,7 @@ input:focus {
   margin-top: 30px;
 }
 
-.selector_button_send:hover{
+.selector_button_send:hover {
   background-color: #B4B6A9;
 }
 
@@ -1317,10 +1325,12 @@ input:focus {
   .custom_selector_1 {
     flex-direction: column;
   }
+
   .custom_selector_1 p {
     font-size: 14px
   }
-  .selector_button_send{
+
+  .selector_button_send {
     width: 100%;
   }
 
@@ -1373,12 +1383,10 @@ input[type='checkbox'] {
 }
 
 .button_send_block {
+  padding-top: 15px;
   text-align: right;
 }
 
-@media (max-width: 768px) {
-  
-}
 
 @media (max-width: 576px) {
   .button_send {
@@ -1392,6 +1400,11 @@ input[type='checkbox'] {
   width: 100%;
   margin: auto;
   margin-top: 10vh;
+  height: 350px;
+}
+
+.case_banner h2 {
+  margin-top: 50px;
 }
 
 @media (max-width: 768px) {
@@ -1400,73 +1413,53 @@ input[type='checkbox'] {
   }
 }
 
-.case_banner h2 {
-  margin-bottom: 10vh;
-}
-
 /*slider旁邊的文字*/
-.case_gift {
-  position: relative;
-
+.case_gift img,
+.case_wedding img,
+.case_indoor img {
+  position: absolute;
+  z-index: -2;
+  width: auto;
+  height: auto;
 }
 
 .slider p {
   font-family: 'Noto Serif TC', serif;
 }
 
-
-.case_gift img {
-  position: absolute;
-  z-index: -2;
-  right: 10%;
-  top: 20vh;
-
-
+.case_gift,
+.case_wedding,
+.case_indoor {
+  position: relative;
+  display: flex;
+  height: 100%;
 }
 
-@media (max-width: 1024px) {
-  .case_gift img {
-    display: none;
-  }
-
+.case_gift {
+  justify-content: flex-end;
+  top: 220px;
+  left: 160px;
 }
 
 .case_wedding {
-  position: relative;
-
-}
-
-.case_wedding img {
-  position: absolute;
-  top: 60vh;
-  left: 10%;
-
-}
-
-@media (max-width: 1024px) {
-  .case_wedding img {
-    display: none;
-  }
-
+  justify-content: flex-start;
+  top: 160px;
+  right: 160px;
 }
 
 .case_indoor {
-  position: relative;
-
+  justify-content: flex-end;
+  top: 80px;
+  left: 160px;
 }
 
-.case_indoor img {
-  position: absolute;
-  top: 113vh;
-  right: 10%;
+@media (max-width: 1200px) {
 
-}
-
-@media (max-width: 1024px) {
-  .case_indoor img {
+  .case_gift,
+  .case_wedding,
+  .case_indoor {
     display: none;
   }
-
 }
 
 /*products區*/
@@ -1516,6 +1509,10 @@ input[type='checkbox'] {
   justify-content: center;
 }
 
+.currentImage {
+  width: 310px;
+}
+
 .des>.products-detail {
   padding: 50px 0;
 }
@@ -1532,7 +1529,6 @@ input[type='checkbox'] {
   object-fit: cover;
   cursor: pointer;
   transition: border 0.3s;
-  border-radius: 4px;
 }
 
 .products_section .pic {
@@ -1553,6 +1549,10 @@ input[type='checkbox'] {
     margin-bottom: 50px;
   }
 
+  .currentImage {
+    width: 422px;
+  }
+
   .thumbnail-images {
     gap: 10px;
   }
@@ -1571,6 +1571,7 @@ input[type='checkbox'] {
 
 @media (max-width:768px) {
 
+
   .products_section .small_pic {
     margin: 10px;
     margin-left: 0px;
@@ -1584,6 +1585,16 @@ input[type='checkbox'] {
     font-size: 26px;
   }
 
+}
+
+@media (max-width:576px) {
+
+  .products_section .pic,
+  .currentImage,
+  .thumbnail-images,
+  .thumbnail-images img {
+    width: 100%;
+  }
 }
 
 
