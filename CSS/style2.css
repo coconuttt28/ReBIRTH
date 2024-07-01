@@ -1396,11 +1396,15 @@ input[type='checkbox'] {
 }
 
 /*客戶案例區*/
-.case_banner img {
-  width: 100%;
-  margin: auto;
-  margin-top: 10vh;
+
+.case_banner {
+  background-image: url(../images/case_banner.jpg);
+  background-position: center -680px;
+  width: 100vw;
   height: 350px;
+  background-size: auto 1500px;
+  background-repeat: no-repeat;
+  margin-top: 10vh;
 }
 
 .case_banner h2 {
@@ -1408,8 +1412,10 @@ input[type='checkbox'] {
 }
 
 @media (max-width: 768px) {
-  .case_banner img {
+  .case_banner {
     margin-top: 72.06px;
+    background-size: auto 620px;
+    background-position: center -120px;
   }
 }
 

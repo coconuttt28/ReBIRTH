@@ -256,7 +256,9 @@
     display: flex;
   }
 
-  .case_gift_rwd {
+  .case_gift_rwd,
+  .case_wedding_rwd,
+  .case_indoor_rwd {
     padding-bottom: 10px;
   }
 
@@ -270,7 +272,6 @@
   .slider p {
     width: 100%;
     font-size: 14px;
-    /* line-height: 1.3; */
   }
 }
 
@@ -310,4 +311,15 @@
   .slider p {
     line-height: 1.3;
   }
+
+  .slick-slider {
+    height: 600px;
+    padding-bottom: 20px;
+  }
 }
+
+/* @media (max-width: 500px) {
+  [data-aos] {
+    display: none !important;
+  }
+} */
