@@ -618,6 +618,15 @@ span {
 }
 
 @media (max-width:576px) {
+    .logo img {
+        max-width: 150px;
+        min-width: 150px;
+    }
+
+    .overlay-logo img {
+        width: 150px;
+    }
+
     .overlay {
         overflow-y: auto;
     }
@@ -1276,7 +1285,9 @@ section {
     }
 
     .about_banner {
-        background-position: -970px -1000px;
+        background-position: center -280px;
+        background-size: auto 900px;
+        min-height: 250px;
     }
 
     .team_main {

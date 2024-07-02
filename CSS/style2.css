@@ -474,6 +474,11 @@ body {
 }
 
 @media (max-width:576px) {
+  .logo img {
+    max-width: 150px;
+    min-width: 150px;
+  }
+
   .overlay {
     overflow-y: auto;
   }
@@ -624,6 +629,9 @@ span {
 
 /*按鈕區*/
 
+#Case h2 {
+  margin-top: 50px;
+}
 
 h2 {
   font-family: 'Italiana', serif;
@@ -656,6 +664,10 @@ h2 {
 }
 
 @media (max-width:576px) {
+  .overlay-logo img {
+    width: 150px;
+  }
+
   h2 {
     font-size: 36px;
   }
@@ -1414,8 +1426,9 @@ input[type='checkbox'] {
 @media (max-width: 768px) {
   .case_banner {
     margin-top: 72.06px;
-    background-size: auto 620px;
-    background-position: center -120px;
+    background-size: auto 520px;
+    background-position: center -130px;
+    height: 250px;
   }
 }
 

@@ -264,7 +264,7 @@ html {
     position: absolute;
     left: 0;
     top: 22px;
-    opacity: 1; 
+    opacity: 1;
 }
 
 .header_menu a:hover::after {
@@ -288,7 +288,7 @@ html {
 /* 小選單寬度 */
 .dropdown_menu li {
     float: none;
-    border-style:solid;
+    border-style: solid;
     box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.2);
 }
 
@@ -301,7 +301,7 @@ html {
     font-size: 14px;
 }
 
-.dropdown_menu li:hover{
+.dropdown_menu li:hover {
     background-color: #D6D8CA;
     transition: all .3s;
 }
@@ -492,7 +492,7 @@ span {
     padding-bottom: 35px;
 }
 
-.overlay-logo img{
+.overlay-logo img {
     width: 200px;
 }
 
@@ -619,6 +619,15 @@ span {
 }
 
 @media (max-width:576px) {
+    .logo img {
+        max-width: 150px;
+        min-width: 150px;
+    }
+
+    .overlay-logo img {
+        width: 150px;
+    }
+
     .overlay {
         overflow-y: auto;
     }
