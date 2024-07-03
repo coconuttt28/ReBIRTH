@@ -3,10 +3,8 @@ Swal.fire({
   icon: "info",
 });
 
-// const productList = [
-// ↓
+
 let allProducts = [
-  // ↑
   {
     type: "daisy",
     color: "orange",
