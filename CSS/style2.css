@@ -1614,6 +1614,10 @@ input[type='checkbox'] {
   .thumbnail-images img {
     width: 100%;
   }
+
+  .des p {
+    font-size: 14px;
+  }
 }
 
 
@@ -1697,6 +1701,11 @@ input[type='checkbox'] {
 
   .additional {
     padding: 0 20px;
+    margin-top: 50px;
+  }
+
+  .additional p {
+    padding-bottom: 0px;
   }
 
 }
